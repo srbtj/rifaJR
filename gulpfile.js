@@ -8,7 +8,7 @@ gulp.task('script',function(){
 });
 
 gulp.task('images',function(){
-    gulp.src('src/image/*.*')
+    gulp.src('src/img/**/*.*')
         .pipe(imagemin({
             progressive : true
         }))
@@ -23,7 +23,7 @@ gulp.task('css',function(){
 
 gulp.task('build',function(){
     gulp.watch('src/js/**/*.js',['script']);
-    gulp.watch('src/img/*.*',['images']);
+    gulp.watch('src/img/**/*.*',['images']);
     gulp.watch('src/css/**/*.less',['css']);
 });
 
