@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,user-scale=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
     <title>首页</title>
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/css/index.css">
@@ -14,48 +14,418 @@
 <body>
 
 <!-- 头部 -->
-<div class="header container-fluid">
-    <div class="container">
-        <div class="header-top">
+<div id="header" class="container-fluid">
+    <div class="header-top">
+        <div class="container">
             <div class="nav-left">
-                <a href="#">个人投资</a>
-                <a href="#">投资移民</a>
-                <a href="#">专业机构服务</a>
+                <a href="javascript:;" class="active">个人投资</a>
+                <a href="javascript:;">投资移民</a>
+                <a href="javascript:;">专业机构服务</a>
             </div>
-            <!--<div class="nav-right">-->
-                <!--<div class="nav-right-set">-->
-                    <!--<a href="#"></a>-->
-                    <!--<a href="#"></a>-->
-                    <!--<a href="#"></a>-->
-                <!--</div>-->
-                <!--<div class="nav-right-about">-->
-                    <!--<a href="#">联系我们</a>-->
-                    <!--<a href="#">客户服务</a>-->
-                <!--</div>-->
-                <!--<div class="nav-right-wx">-->
-                    <!--<a href="#"></a>-->
-                <!--</div>-->
-                <ul class="nav-right-item">
-                    <li>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">联系我们</a>
-                        <a href="#">客户服务</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                </ul>
-            <!--</div>-->
+            <ul class="nav-right-item">
+                <li class="language">
+                    <a href="javascript:;" class="active"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系我们</a>
+                    <a href="javascript:;">客户服务</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="dist/img/header/wx.png"/>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="header-center"></div>
     </div>
+    <div class="header-center">
+        <div class="container">
+            <a class="header-logo">
+                <img src="dist/img/header/logo.png"/>
+            </a>
+            <ul class="header-center-item">
+                <li class="active">
+                    <a href="javascript:;">
+                        <span>选择日发</span>
+                        <span>需求与解决方案</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>证券</span>
+                        <span>港股美股市场</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>期货</span>
+                        <span>外盘期货全品种</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>理财</span>
+                        <span>港币美元投资</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="dist/img/header/banner-bg.png" alt="">
+            <div class="carousel-caption banner-item">
+                <div class="container">
+                    <div class="banner-item-txt">
+                        <a href="javascript:;">日发金融  跨境投资</a>
+                        <a href="javascript:;">国内领先的平台型跨境投资公司</a>
+                        <span>关注日发微信公众号<br/> 随时随地掌握账户交易情况、日发资讯 </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-nav">
+                <div class="container banner-nav-text">
+                    <a href="javascript:;" class="active">预约开户</a>
+                    <a href="javascript:;">股票交易</a>
+                    <a href="javascript:;">软件下载</a>
+                    <a href="javascript:;">表单下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+       <img src="dist/img/header/left.png">
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <img src="dist/img/header/right.png">
+    </a>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+    </ol>
+</div>
+
+<div id="wrap" class="container-fluid">
+    <div class="container">
+        <!-- 选择日发 -->
+        <div class="choice">
+            <div class="wrap-left">
+                <div class="wrap-left-lSlide">
+                    <img src="./dist/img/header/gg.png" />
+                    <div><h2><a href="javascript:;">港股美股——开户大礼包</a></h2></div>
+                    <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台开户，专业投资需求一站式方案</span>
+                </div>
+                <div class="wrap-left-rSlide">
+                    <img src="./dist/img/header/lc-3.png" />
+                    <div><h2><a href="javascript:;">外盘期货——开户大礼包</a></h2></div>
+                    <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台开户，专业投资需求一站式方案</span>
+                </div>
+            </div>
+
+            <div class="wrap-left">
+                <div class="wrap-left-lSlide">
+                    <img src="./dist/img/header/lc-4.png" />
+                    <div><h2><a href="javascript:;">开户大礼包</a></h2></div>
+                    <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台开户，专业投资需求一站式方案</span>
+                </div>
+                <div class="wrap-left-rSlide">
+                    <img src="./dist/img/header/lc-1.png" />
+                    <div><h2><a href="javascript:;">秋季新理财</a></h2></div>
+                    <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台开户，专业投资需求一站式方案</span>
+                </div>
+            </div>
+
+            <div class="wrap-right">
+                <div class="wrap-right-item">
+                    <div>
+                        <span>最新通知</span>
+                        <a href="javascript:;">MORE</a>
+                    </div>
+                    <ul class="news-list">
+                        <li>
+                            <a href="javascript:;">
+                                <span>中秋节交易时间通知</span>
+                                <span>09/18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>系统维护通知</span>
+                                <span>09/18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>深圳华侨城悠投资咖啡馆周六开始营业的公告六开始营业的公</span>
+                                <span>09/18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>中秋节交易时间通知</span>
+                                <span>09/18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
+                                <span>09/18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>中秋节交易时间通知</span>
+                                <span>09/18</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap-right-item">
+                    <div>
+                        <span>表单通知</span>
+                        <a href="javascript:;">MORE</a>
+                    </div>
+                    <ul class="form-list">
+                        <li>
+                            <a href="javascript:;">
+                                <span>期货资料类</span>
+                                <img src="dist/img/header/more.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>证券资料类</span>
+                                <img src="dist/img/header/more.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>投资移民类</span>
+                                <img src="dist/img/header/more.png" />
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="wrap-right-item"></div>
+            </div>
+
+        </div>
+
+        <!-- 证券 -->
+        <div class="bond">
+            <div class="bond-title">
+                <div>
+                    <span>证券</span>
+                    <a href="javascript:;">MORE</a>
+                </div>
+            </div>
+            <div class="bont-txt">
+                <div class="bond-left">
+                    <img src="dist/img/header/zq.png" />
+                </div>
+                <div class="bond-center">
+                    <div>
+                        <a href="javascript:;">证券知识</a>
+                        <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案.一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。</span>
+                    </div>
+                </div>
+                <div class="bond-right">
+                    <div>
+                        <a href="javascript:;">出入金说明</a>
+                        <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案</span>
+                    </div>
+
+                    <a href="javascript:;">
+                        <span>了解更多</span>
+                        <img src="dist/img/header/load-more.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 期货 -->
+        <div class="forward">
+            <div class="forward-title">
+                <div>
+                    <span>期货</span>
+                    <a href="javascript:;">MORE</a>
+                </div>
+            </div>
+            <div class="forward-txt">
+                <div class="forward-left">
+                    <div>
+                        <a href="javascript:;">出入金说明</a>
+                        <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案</span>
+                    </div>
+
+                    <a href="javascript:;">
+                        <span>了解更多</span>
+                        <img src="dist/img/header/load-more.png" />
+                    </a>
+                </div>
+                <div class="forward-center">
+                    <div>
+                        <a href="javascript:;">期货知识</a>
+                        <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案.一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。</span>
+                    </div>
+                </div>
+                <div class="forward-right">
+                    <img src="dist/img/header/qh.png" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 理财 -->
+        <div class="money">
+            <div class="money-title">
+                <div>
+                    <span>理财</span>
+                    <a href="javascript:;">MORE</a>
+                </div>
+            </div>
+            <div class="money-txt">
+                <div class="money-left">
+                    <img src="dist/img/header/lc.png" />
+                </div>
+                <div class="money-center">
+                    <div>
+                        <a href="javascript:;">理财知识</a>
+                        <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案.一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。</span>
+                    </div>
+                </div>
+                <div class="money-right">
+                    <div>
+                        <a href="javascript:;">出入金说明</a>
+                        <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案</span>
+                    </div>
+
+                    <a href="javascript:;">
+                        <span>了解更多</span>
+                        <img src="dist/img/header/load-more.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 联系我们 -->
+        <div class="about-us">
+            <ul>
+                <li>
+                    <span>致电我们</span>
+                    <span>欢迎致电我们的客户代表直接对话</span>
+                    <span>800 820 8088</span>
+                </li>
+                <li>
+                    <span>联络我们</span>
+                    <span>另外，您亦可填写有关表格，我们<br/> 会尽快与您联络</span>
+                    <a href="javascript:;">
+                        <span>联络我们</span>
+                        <img src="dist/img/header/about-arrow.png" />
+                    </a>
+                </li>
+                <li>
+                    <span>服务地址</span>
+                    <span>请用我们的寻找分行功能，随时<br/> 联络我们各分行</span>
+                    <a href="javascript:;">
+                        <span>分行地址</span>
+                        <img src="dist/img/header/about-arrow.png" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</div>
+<div id="footer" class="container-fluid">
+    <div class="footer-top">
+        <div class="foot-top-bg-left"></div>
+        <div class="foot-top-bg-right"></div>
+        <div class="container footer-top-ctx">
+            <div class="left-ctx">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><a href="javascript:;">关于日发</a> </th>
+                            <th><a href="javascript:;">资质查询</a></th>
+                            <th><a href="javascript:;">新闻发布</a></th>
+                            <th><a href="javascript:;">文件下载</a></th>
+                            <th><a href="javascript:;">客户服务</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="javascript:;">发展历程</a></td>
+                            <td><a href="javascript:;">XX资质</a></td>
+                            <td><a href="javascript:;">XX新闻</a></td>
+                            <td><a href="javascript:;">软件下载</a></td>
+                            <td><a href="javascript:;">交易服务</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:;">控股股东</a></td>
+                            <td><a href="javascript:;">XX资质</a></td>
+                            <td><a href="javascript:;">XX新闻</a></td>
+                            <td><a href="javascript:;">表单下载</a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href="javascript:;">XX资质</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mianze">
+                    <span>免责声明</span>
+                </div>
+            </div>
+            <div class="right-ctx">
+                <span>联系我们</span>
+                <div class="right-ctx-lItem">
+                    <span>客服电话</span>
+                    <span>4008 908 168 <i>（内地24小时）</i></span>
+                    <span>852 1688 688 <i>（香港24小时）</i></span>
+                    <span>147 1503 5047 <i>（香港交易日）</i></span>
+                </div>
+                <div class="right-ctx-rItem">
+                    <span>扫描二维码添加微信公众号或下载客户端</span>
+                    <div class="qrcode">
+                        <img src="dist/img/header/qrcode1.png" />
+                        <span>日发服务号</span>
+                    </div>
+                    <div class="qrcode">
+                        <img src="dist/img/header/qrcode2.png" />
+                        <span>日发客户端</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container ">
+            <span>Copyright©2013日发国际金融有限公司.   沪ICP备12046937号. </span><br/>
+            <span> The content contained on this site is provided to users "AS IS" without any expressor implied warrantly.</span>
+        </div>
+    </div>
+
 </div>
 
 <script src="src/js/lib/jquery.min.js"></script>
 <script src="src/js/lib/bootstrap.min.js"></script>
+<script src="src/js/index.js"></script>
 </body>
 </html>

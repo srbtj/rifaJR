@@ -1,50 +1,142 @@
 @import "./public";
-.header{
-  background: #ebebeb;
+#header{
   .header-top{
     line-height:35px;
     height: 35px;
     position: relative;
+    background: #ebebeb;
     a{
       color: #333333;
     }
     .nav-left a{
       margin-right : 22px;
+      display:inline-block;
+      &.active{
+        position: relative;
+        &:before{
+          width:0;
+          height:0;
+          content:' ';
+          border:5px solid transparent;
+          position:absolute;
+          left : 50%;
+          top:100%;
+          margin-left : -5px;
+          border-top-color:#ebebeb;
+        }
+      }
     }
-    ul{
+    .nav-right-item{
       position: absolute;
       right : 0;
       top : 0;
 
-      li{ float : left;}
-      //div{
-      //  display:inline-block;
-      //  position: relative;
-      //}
-      //div:not(:first-child){
-      //  border-left: 2px solid #e3e3e3;
-      //}
-      //.nav-right-set{
-      //  margin-right : 20px;
-      //  a{ margin-left : 6px;
-      //    width: 28px;
-      //    height: 27px;
-      //    -webkit-background-size:cover;
-      //    background-size:cover;
-      //  }
-      //  a:nth-of-type(1){
-      //    background: url("../img/header/jt.png") no-repeat center;
-      //
-      //  }
-      //  a:nth-of-type(2){
-      //    background: url("../img/header/ft.png") no-repeat center;
-      //  }
-      //  a:nth-of-type(3){
-      //    background: url("../img/header/en.png") no-repeat center;
-      //
-      //  }
-      //}
+      li{
+        float : left;
+        &:not(:first-child){
+          border-left: 2px solid #e3e3e3;
+        }
+
+        &:not(:last-child){
+          padding-right : 20px;
+        }
+        &:nth-of-type(1){
+          a{
+            margin-left : 6px;
+            margin-top:4px;
+            width: 28px;
+            height: 27px;
+            font-size : 0;
+            display:inline-block;
+            -webkit-background-size:cover;
+            background-size:cover;
+            &:nth-of-type(1){
+              background: url("../img/header/jt.png") no-repeat center;
+              &:hover,&.active{
+                background: url("../img/header/jt-hover.png") no-repeat center;
+              }
+            }
+            &:nth-of-type(2){
+              background: url("../img/header/ft.png") no-repeat center;
+              &:hover,&.active{
+                background: url("../img/header/ft-hover.png") no-repeat center;
+              }
+            }
+            &:nth-of-type(3){
+              background: url("../img/header/en.png") no-repeat center;
+              &:hover,&.active{
+                background: url("../img/header/en-hover.png") no-repeat center;
+              }
+            }
+          }
+        }
+        &:nth-of-type(2){
+          a{
+            position: relative;
+            margin-left : 40px;
+            &:before{
+              content :  url("../img/header/about-icon.png");
+              width : 16px;
+              height : 15px;
+              position:absolute;
+              top : -7px;
+              left : -20px;
+            }
+
+            &:nth-of-type(2):before{
+              content :  url("../img/header/phone-icon.png");
+            }
+          }
+        }
+        &:nth-of-type(3){
+          padding-left : 12px;
+          img{
+            margin-top : 8px;
+          }
+        }
+      }
     }
 
+  }
+  .header-center{
+    height : 80px;
+    .header-logo{
+      position:absolute;
+      line-height : 80px;
+      img{
+        width : 224px;
+        height : 47px;
+        vertical-align: middle;
+      }
+    }
+    .header-center-item{
+      position:relative;
+      left : 238px;
+      li{
+        float : left;
+        height : 80px;
+        margin-left : 34px;
+        &.active{
+          border-bottom : 3px solid #2ebbe7;
+
+          span:nth-of-type(1){
+            color : #2ebbe7;
+          }
+        }
+
+        span{
+          font-size : 12px;
+          text-align: center;
+          color: #808080;
+          display:block;
+
+          &:nth-of-type(1){
+            color : #333;
+            font-size : 18px;
+            margin-top:24px;
+          }
+        }
+      }
+    }
   }
 }

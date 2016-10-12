@@ -1,2 +1,494 @@
 @import "public";
 @import "header";
+@import "footer";
+
+.carousel{
+  height : 404px;
+
+  >a{
+    height:100%;
+    line-heigth : 1;
+    img{
+      width : 34px;
+      height : 63px;
+      position: absolute;
+      top : 50%;
+      margin-top : -30px;
+    }
+  }
+
+  .item{
+    position: relative;
+    img{
+      width:100%;
+      height:404px;
+      overflow : hidden;
+    }
+    //.carousel-caption{
+    //  left : 0;
+    //  top : 0;
+    //  bottom: 0;
+    //  padding:0;
+    //  margin:0;
+    //}
+
+    .banner-item{
+      text-align: left;
+      padding : 0px;
+      left : 0px;
+      right : 0px;
+      top : 0px;
+      bottom : 0px;
+
+      .banner-item-txt{
+        a{
+          display: block;
+          color : #fff;
+
+          &:nth-of-type(1){
+            font-size:50px;
+            margin-top:88px;
+          }
+
+          &:nth-of-type(2){
+            font-size : 24px;
+            margin-top:15px;
+          }
+        }
+        span{
+          display: block;
+          margin-top:60px;
+          font-size : 14px;
+        }
+      }
+    }
+  }
+
+  .banner-nav{
+    width : 100%;
+    height : 70px;
+    position: absolute;
+    z-index : 10;
+    top : 332px;
+    background: url("../img/header/nav-bg.png") repeat-x;
+
+    .banner-nav-text{
+
+      >a{
+        float: left;
+        line-height:70px;
+        width:25%;
+        text-align: center;
+        font-size : 18px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #ffffff;
+        position: relative;
+        &:not(:last-child){
+          border-right : 1px solid #55504c;
+        }
+
+        &.active{
+          background: url("../img/header/nav-bg-active.png") repeat-x;
+        }
+
+        &:after{
+          position: absolute;
+          top:4px;
+          content: url("../img/header/banner-arrow.png");
+          width : 22px;
+          height : 22px;
+          margin-left : 15px;
+
+        }
+        
+        
+      }
+
+      //
+    }
+  }
+  
+  .carousel-indicators{
+    bottom : -40px;
+
+    li{
+      border-color : #e4e3e3;
+      
+      &.active{
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+
+#wrap{
+  margin-top:58px;
+  //选择日发
+  .choice{
+    background: greenyellow;
+    margin-top:20px;
+    position: relative;
+    .wrap-left{
+      float: left;
+    }
+    .wrap-left{
+      width : 646px;
+
+      .wrap-left-lSlide,.wrap-left-rSlide{
+        width : 312px;
+        float : left;
+        margin-bottom : 30px;
+        height: 215px;
+        overflow: hidden;
+        >div{
+          position: relative;
+          h2{
+            line-height:34px;
+            margin-top : 5px;
+            max-width : 290px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            a{
+              font-size : 16px;
+              color: #333;
+            }
+          }
+        }
+
+
+        span{
+          line-height : 20px;
+          color : #666;
+          font-size:12px;
+        }
+      }
+      .wrap-left-rSlide{
+        margin-left:22px;
+      }
+    }
+    .wrap-right{
+      width: 312px;
+      position: absolute;
+      right:0;
+
+      .wrap-right-item{
+        >div{
+          border-bottom : 1px solid #cccccc;
+          position: relative;
+          span{
+            font-size : 16px;
+            color : #2ebbe7;
+            width : 94px;
+            display: block;
+            padding-bottom : 10px;
+            border-bottom: 1px solid green;
+          }
+          
+          a{
+            position: absolute;
+            top:4px;
+            right : 0;
+            font-size : 12px;
+          }
+        }
+
+        .news-list{
+          margin-top : 16px;
+          height : 248px;
+          overflow : hidden;
+          li{
+            line-height:34px;
+            position: relative;
+            a{
+              color : #4c4c4c;
+              font-size : 12px;
+
+              span:nth-of-type(1){
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width : 260px;
+              }
+              span:nth-of-type(2){
+                position: absolute;
+                right:0px;
+                top:0px;
+              }
+            }
+          }
+        }
+
+        .form-list{
+          li{
+            line-height:48px;
+            border-bottom: 1px solid #dddddd;
+            a{
+              font-size:14px;
+              color : #666;
+              display: block;
+              img{
+                float : right;
+                width: 5px;
+                height: 10px;
+                margin-top:20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //>div{
+    //  float : left;
+    //  margin-right:22px;
+    //  width : 312px;
+    //  height : 210px;
+    //  margin-top : 10px;
+    //  background: greenyellow;
+    //  &.wrap-right{
+    //    float: right;
+    //    margin-right:0;
+    //  }
+    //
+    //  img{
+    //    height: 100px;
+    //    width: 312px;
+    //  }
+    //}
+
+
+  }
+
+  //证券 期货 理财
+  .bond,.forward,.money{
+    width : 100%;
+    float: left;
+    margin-top: 16px;
+    margin-bottom : 58px;
+    .bond-title,
+    .forward-title,
+    .money-title
+    {
+      border-bottom : 1px solid #ccc;
+      position: relative;
+      span{
+        color: #2ebbe7;
+        font-size: 20px;
+        display: block;
+        width:46px;
+        padding-bottom : 10px;
+        border-bottom : 1px solid #2a6496;
+      }
+      
+      a{
+        position: absolute;
+        right:0;
+        top:4px;
+        color: #2a6496;
+        font-size:12px;
+      }
+    }
+
+    .bont-txt,
+    .forward-txt,
+    .money-txt
+    {
+      margin-top : 16px;
+      position: relative;
+      .bond-left,.bond-center,.bond-right,
+      .forward-left,.forward-center,.forward-right,
+      .money-left,.money-center,.money-right
+      {
+        float : left;
+        width: 312px;
+        margin-right : 22px;
+      }
+      .bond-right,
+      .forward-right,
+      .money-right
+      {
+        margin-right : 0;
+      }
+
+      .bond-left,
+      .forward-right,
+      .money-left
+      {
+        img{
+          width : 312px;
+          height:190px;
+        }
+      }
+      .bond-center,.bond-right,
+      .forward-left,.forward-center,
+      .money-center,.money-right
+      {
+        a{
+          display: block;
+          line-height: 52px;
+          color : #333;
+          font-size:16px;
+          font-weight:500;
+        }
+        span{
+          color : #666;
+          font-size:12px;
+        }
+      }
+
+      .bond-right,
+      .forward-left,
+      .money-right
+      {
+        position: relative;
+      }
+      .bond-right > a,
+      .forward-left > a,
+      .money-right > a
+      {
+        position: absolute;
+        top:170px;
+        right:10px;
+        span{
+          background-color: #2ebbe7;
+          border-radius : 999px;
+          border : 1px solid #2ebbe7;
+          padding:13px 42px;
+          font-size : 14px;
+          color : #fff;
+        }
+        img{
+          width : 18px;
+          height:17px;
+          position: absolute;
+          right:12px;
+          top:18px;
+        }
+      }
+    }
+  }
+
+  //联系我们
+  .about-us{
+    margin-top: 16px;
+    margin-bottom : 58px;
+    height:218px;
+    width:100%;
+    float : left;
+    background-color: #f5f5f5;
+    border: 1px solid #e6e6e6;
+    border-bottom-right-radius: 25px;
+
+    ul{
+      li{
+        margin : 44px 0;
+        float: left;
+        width : 324px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-right:1px solid #e7e7e7;
+        text-align:center;
+
+        &:last-child{
+          border-right:none;
+        }
+
+        >span{
+          display: block;
+          color: #333;
+          &:nth-of-type(1){
+            line-height:34px;
+            font-size:18px;
+            font-weight:500;
+
+            position: relative;
+
+            &:before{
+              position: absolute;
+              -webkit-background-size:cover;
+              background-size:cover;
+              content: '';
+            }
+
+          }
+          &:nth-of-type(2){
+            margin-top : 20px;
+            line-height:20px;
+            font-size:12px;
+          }
+        }
+
+        &:nth-of-type(1){
+
+          span:nth-of-type(1){
+            &:before{
+              left : 100px;
+              top : 8px;
+              background: url("../img/header/about-phone.png") no-repeat;
+              width : 20px;
+              height:20px;
+            }
+          }
+          span:nth-of-type(3){
+            line-height:36px;
+            color: #2ebbe7;
+            font-size:24px;
+            margin-top:20px;
+          }
+        }
+
+        &:nth-of-type(2){
+          span:nth-of-type(1){
+            &:before{
+              left : 98px;
+              top : 6px;
+              background: url("../img/header/about-us.png") no-repeat;
+              width : 22px;
+              height:23px;
+            }
+          }
+        }
+
+        &:nth-of-type(3){
+          span:nth-of-type(1){
+            &:before{
+              left : 104px;
+              top : 6px;
+              background: url("../img/header/about-address.png") no-repeat;
+              width : 16px;
+              height:23px;
+            }
+          }
+        }
+
+        &:nth-of-type(2),&:nth-of-type(3){
+          > a {
+            display: block;
+            margin-top : 16px;
+            position: relative;
+
+            span{
+              padding : 10px 40px 10px 30px;
+              background-color: #fff;
+              border-radius : 999px;
+              border : 1px solid #ccc;
+              color : #2ebbe7;
+              font-size : 14px;
+            }
+
+            img{
+              position: absolute;
+              left : 200px;
+              top : 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
