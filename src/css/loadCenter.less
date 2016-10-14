@@ -1,0 +1,224 @@
+@import "public";
+@import "header";
+@import "notice-banner";
+
+@import "footer";
+@import "about-us";
+
+@import "banner-nav";
+
+.banner-nav{
+
+  .banner-nav-text{
+
+    >a{
+      width : 50%;
+      cursor: pointer;
+      &:before{
+        position: absolute;
+        top:2px;
+        content: url("../img/loadcenter/banner-load.png");
+        width : 23px;
+        height : 21px;
+        margin-left : -40px;
+      }
+
+      &.active{
+        color: #2ebbe7;
+        &:before{
+          content: url("../img/loadcenter/banner-load-active.png");
+        }
+
+        &:after{
+          content: '';
+          width : 0;
+          height : 0;
+          position: absolute;
+          left:50%;
+          top : 85%;
+          border : 5px solid transparent;
+          border-bottom-color:#fff;
+          border-bottom-color: #fff;
+          margin-left: -3px;
+        }
+      }
+    }
+  }
+}
+
+.load-form-info{
+  margin-top : 32px;
+
+
+}
+
+#load-wrap{
+  .load-title{
+    border-bottom: 1px solid #dbdbdb;
+    line-height : 46px;
+    text-align: center;
+
+    span{
+      color: #4c4c4c;
+      font-size:24px;
+      font-weight:200;
+    }
+  }
+
+  .load-nav{
+    margin-top:28px;
+    border-bottom: 1px solid #dbdbdb;
+    height:35px;
+    li{
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right : 48px;
+      a{
+        color: #4c4c4c;
+        font-size:16px;
+        font-weight:500;
+      }
+
+      &.active{
+        border-bottom : 2px solid #2ebbe7;
+        a{
+          color : #2ebbe7;
+        }
+      }
+    }
+  }
+
+  .load-table{
+    margin : 20px 0 25px;
+    border-radius: 8px;
+    border : 1px solid #f3f3f3;
+    padding : 8px;
+
+    >div{
+
+      border : 1px solid #e6e6e6;
+      p{
+        line-height: 48px;
+        height: 48px;
+        border-bottom : 1px solid #ececec;
+
+        &:nth-of-type(2n){
+          background: #fafafa;
+        }
+        
+        span,a{
+          float : left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        span{
+          margin-left:10px;
+
+          &:nth-of-type(1){
+            width:585px;
+          }
+        }
+
+        a{
+          float : right;
+          margin: 7px 25px 0 0;
+          width : 85px;
+          height : 34px;
+          background: url("../img/loadcenter/load-btn.png") no-repeat;
+
+
+          &:hover{
+            background: url("../img/loadcenter/load-btn-active.png") no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  .load-soft{
+    margin-bottom : 25px;
+
+    >div{
+      padding-bottom : 28px;
+      border-bottom : 1px solid #dbdbdb;
+      margin-top : 28px;
+
+      .load-soft-left{
+        text-align: center;
+        float: left;
+        width : 310px;
+        margin-top:48px;
+      }
+      .load-soft-right{
+        margin-left : 325px;
+        span{
+          display: block;
+          font-size:12px;
+          color: #4c4c4c;
+          line-height:24px;
+        }
+        .load-soft-title{
+          line-height:60px;
+          color: #4c4c4c;
+          font-size:16px;
+          font-weight:500;
+        }
+
+        div{
+          margin-top:12px;
+
+          &.baseSize{
+            span{
+              font-size:14px;
+            }
+          }
+
+          .load-soft-second-title{
+            font-weight:500;
+          }
+
+          a{
+            margin-right:20px;
+            width : 175px;
+            height : 40px;
+            display: inline-block;
+          }
+
+          &.device-load{
+            a:nth-of-type(1){
+              background: url("../img/loadcenter/android-load.png") no-repeat;
+              -webkit-background-size:cover;
+              background-size:cover;
+
+              &:hover{
+                background-position-y: -44px;
+              }
+            }
+
+            a:nth-of-type(2){
+              background: url("../img/loadcenter/ios-load.png") no-repeat;
+              -webkit-background-size:cover;
+              background-size:cover;
+
+              &:hover{
+                background-position-y: -44px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about-us{
+    margin-top : 0;
+    margin-bottom : 25px;
+  }
+}
+
