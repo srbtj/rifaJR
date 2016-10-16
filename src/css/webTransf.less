@@ -1,0 +1,115 @@
+@import "header";
+@import "about-us";
+@import "banner-nav";
+@import "notice-banner";
+@import "notice-title";
+@import "footer";
+
+#web-wrap{
+
+  .web-container{
+    border-bottom : 1px solid #cccccc;
+    padding-bottom : 48px;
+  }
+
+  .banner-nav{
+    .banner-nav-text{
+      >a{
+        width : 25%;
+        &:after{
+          position: absolute;
+          top:4px;
+          content: url("../img/header/banner-arrow.png");
+          width : 22px;
+          height : 22px;
+          margin-left : 15px;
+        }
+      }
+    }
+  }
+
+  .web-left{
+    float: left;
+    width: 646px;
+
+    .web-left-desc{
+      margin-top:42px;
+      .web-left-title{
+        font-size: 24px;
+        color: #333;
+        line-height:46px;
+      }
+
+      >div{
+        margin-top:20px;
+        span{
+          display:block;
+          font-size: 12px;
+          color: #4c4c4c;
+        }
+      }
+    }
+    .transf-btn{
+      color: #ffffff;
+      line-height: 40px;
+      padding : 13px 45px;
+      font-size:14px;
+      background-color: #2ebbe7;
+      border-radius: 999px;
+      position: relative;
+      left : 465px;
+      top:-40px;
+      &:after{
+        content: '';
+        position: absolute;
+        background: url("../img/bond/load-arrow.png") no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-left:15px;
+        top:11px;
+      }
+    }
+  }
+
+  .web-right{
+    float: right;
+    width: 312px;
+    
+    .web-click{
+      float: right;
+      font-size:12px;
+      color: #2ebbe7;
+    }
+
+    .web-right-list{
+      margin-top: 25px;
+      a{
+        display: block;
+        border-bottom : 1px solid #dddddd;
+        line-height:49px;
+        position: relative;
+        font-size:13px;
+        color: #666;
+        &:after{
+          content: url("../img/rfIndex/notice-lt.png");
+          position: absolute;
+          right:0;
+          width : 5px;
+          height:9px;
+
+        }
+
+        &:hover{
+
+          &:after{
+            content: url("../img/rfIndex/notice-lt-active-2.png");
+            width : 5px;
+            height:9px;
+          }
+        }
+
+        
+      }
+    }
+  }
+}

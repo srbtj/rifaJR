@@ -1,12 +1,13 @@
 body{
   background-color: #fff;
 }
-body,ul,p,table{
+body,ul,p,table,h1,h2,h3,h4,h5{
   margin: 0;
   padding: 0;
 }
 li{ list-style: none;}
 a{
+  cursor: pointer!important;
   outline:none;
 }
 a:link{text-decoration:none; cursor:pointer;  outline:none;}
@@ -26,4 +27,5 @@ img{
   position: relative;
   //background : greenyellow;
 }
-
+.clear{ zoom:1;}
+.clear:after{ content:''; display:block; clear:both;}

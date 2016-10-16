@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>期货</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/fetureIndex.css">
+    <!--[if lt IE 9]>
+    <script src="/dist/js/lib/html5shiv.min.js"></script>
+    <script src="/dist/js/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 头部 -->
+<div id="header" class="container-fluid">
+    <div class="header-top">
+        <div class="container">
+            <div class="nav-left">
+                <a href="javascript:;" class="active">个人投资</a>
+                <a href="javascript:;">投资移民</a>
+                <a href="javascript:;">专业机构服务</a>
+            </div>
+            <ul class="nav-right-item">
+                <li class="language">
+                    <a href="javascript:;" class="active"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </li>
+                <li>
+                    <a href="javascript:;">联系我们</a>
+                    <a href="javascript:;">客户服务</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="dist/img/header/wx.png"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-center">
+        <div class="container">
+            <a class="header-logo">
+                <img src="dist/img/header/logo.png"/>
+            </a>
+            <ul class="header-center-item">
+                <li>
+                    <a href="index.html">
+                        <span>选择日发</span>
+                        <span>需求与解决方案</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./bondIndex.html">
+                        <span>证券</span>
+                        <span>港股美股市场</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="./feturesIndex.html">
+                        <span>期货</span>
+                        <span>外盘期货全品种</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>理财</span>
+                        <span>港币美元投资</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="feture-warp">
+    <div class="banner">
+        <a href="javascript:;">
+            <img src="dist/img/bond/bond-banner.png" />
+        </a>
+
+        <div class="banner-nav">
+            <div class="container banner-nav-text">
+                <a href="javascript:;" class="active">预约开户</a>
+                <a href="javascript:;" >股票交易</a>
+                <a href="loadCenter.html" >软件下载</a>
+                <a href="loadCenter.html" >表单下载</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 一二级导航 -->
+    <div class="container-fluid">
+        <div class="feture-nav clear">
+            <div class="container" role="tablist">
+                <a class="active" href="#product" data-toggle="tab" role="tab">产品介绍</a>
+                <a href="#bond" data-toggle="tab" role="tab">保证金</a>
+                <a href="#close" data-toggle="tab" role="tab">平仓须知</a>
+                <a href="#transfKnow" data-toggle="tab" role="tab">交易须知</a>
+                <a href="#transfDemo" data-toggle="tab" role="tab">交易示范</a>
+            </div>
+        </div>
+
+        <div class="feture-second-nav">
+            <div class="tab-content container">
+                <div id="product" role="tabpanel" class="tab-pane active">
+                    <a href="javascript:;" class="active">环球股指期货</a>
+                    <a href="javascript:;">农产品期货</a>
+                    <a href="javascript:;">外汇期货</a>
+                    <a href="javascript:;">能源期货</a>
+                    <a href="javascript:;">贵金属期货</a>
+                    <a href="javascript:;">基本金属期货</a>
+                    <a href="javascript:;">利率期货</a>
+                </div>
+                <div id="bond" role="tabpanel" class="tab-pane">
+                    <a href="javascript:;" class="active">环球股指期货</a>
+                    <a href="javascript:;">农产品期货</a>
+                    <a href="javascript:;">外汇期货</a>
+                    <a href="javascript:;">能源期货</a>
+                    <a href="javascript:;">贵金属期货</a>
+                    <a href="javascript:;">基本金属期货</a>
+                    <a href="javascript:;">利率期货</a>
+                </div>
+                <div id="close" role="tabpanel" class="tab-pane">
+                    <a href="javascript:;" class="active">环球股指期货</a>
+                    <a href="javascript:;">农产品期货</a>
+                    <a href="javascript:;">外汇期货</a>
+                    <a href="javascript:;">能源期货</a>
+                    <a href="javascript:;">贵金属期货</a>
+                    <a href="javascript:;">基本金属期货</a>
+                    <a href="javascript:;">利率期货</a>
+                </div>
+                <div id="transfKnow" role="tabpanel" class="tab-pane">
+                    <a href="javascript:;" class="active">环球股指期货</a>
+                    <a href="javascript:;">农产品期货</a>
+                    <a href="javascript:;">外汇期货</a>
+                    <a href="javascript:;">能源期货</a>
+                    <a href="javascript:;">贵金属期货</a>
+                    <a href="javascript:;">基本金属期货</a>
+                    <a href="javascript:;">利率期货</a>
+                </div>
+                <div id="transfDemo" role="tabpanel" class="tab-pane">
+                    <a href="javascript:;" class="active">环球股指期货</a>
+                    <a href="javascript:;">农产品期货</a>
+                    <a href="javascript:;">外汇期货</a>
+                    <a href="javascript:;">能源期货</a>
+                    <a href="javascript:;">贵金属期货</a>
+                    <a href="javascript:;">基本金属期货</a>
+                    <a href="javascript:;">利率期货</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--- 表格数据 -->
+    <div class="container-fluid feture-table">
+        <div class="container">
+            <div class="table-info">
+                <span class="table-info-title">环境股指期货</span>
+                <table class="table table-bordered first-table">
+                    <thead>
+                        <tr>
+                            <th>产品名称</th>
+                            <th>SP代码</th>
+                            <th>交易所</th>
+                            <th>交易货币</th>
+                            <th>交易时间</th>
+                            <th>最低波幅</th>
+                            <th>交易单位</th>
+                            <th>合约月份</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td rowspan="4">电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td rowspan="3">电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                        <tr>
+                            <td>恒指<br/>(Hang Seng Index)</td>
+                            <td>HSI</td>
+                            <td>HKEX</td>
+                            <td>港币</td>
+                            <td>电子盘  09:15-12:00; 13:00-16:30 (T+1)17:15-23:45</td>
+                            <td>1点 = HKD 50</td>
+                            <td>HKD 50 x 指数</td>
+                            <td>现月、下月 及之后2个季月</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="update-time">
+                    <span>更新日期</span>
+                    <span>20161016</span>
+                </div>
+            </div>
+            <div class="table-desc">
+                <span>*本公司不会代客户进行实物交割服务, 客户必需于交易所指示之首个通知日或最后交易日之前一个交易日进行平仓或移仓(以较早日期为准)，
+   否则本公司将会进行强制性平仓或移仓</span>
+                <span>** 注意事项：所有交易时间于夏令时往前顺延一小时（除亚洲市场,其中包括TOCOM,SGX,HKEX,MYX）</span>
+                <span>*** 如有更多关于产品方面的查询，请致电日发期货交易部 4008-908-168</span>
+                <span>**** 如想查询产品保证金及收费情况，请点击<a href="javascript:;">http://www.rffg.com.hk/futures?classid=3&p=cashdeposit</a> </span>
+            </div>
+
+            <div class="table-info">
+                <table class="table table-bordered second-table">
+                    <thead>
+                        <tr>
+                            <th>交易代号</th>
+                            <th>交易所中文名称</th>
+                            <th>合约月份</th>
+                            <th>月份代码</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr><tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr><tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>CME</td>
+                            <td>芝加哥商业交易所</td>
+                            <td>1月</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 关于我们 -->
+    <div class="container">
+        <div class="about-us">
+            <ul>
+                <li>
+                    <span>致电我们</span>
+                    <span>欢迎致电我们的客户代表直接对话</span>
+                    <span>800 820 8088</span>
+                </li>
+                <li>
+                    <span>联络我们</span>
+                    <span>另外，您亦可填写有关表格，我们<br/> 会尽快与您联络</span>
+                    <a href="javascript:;">
+                        <span>联络我们</span>
+                        <img src="dist/img/header/about-arrow.png" />
+                    </a>
+                </li>
+                <li>
+                    <span>服务地址</span>
+                    <span>请用我们的寻找分行功能，随时<br/> 联络我们各分行</span>
+                    <a href="javascript:;">
+                        <span>分行地址</span>
+                        <img src="dist/img/header/about-arrow.png" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="footer" class="container-fluid">
+    <div class="footer-top">
+        <div class="foot-top-bg-left"></div>
+        <div class="foot-top-bg-right"></div>
+        <div class="container footer-top-ctx">
+            <div class="left-ctx">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th><a href="javascript:;">关于日发</a> </th>
+                        <th><a href="javascript:;">资质查询</a></th>
+                        <th><a href="javascript:;">新闻发布</a></th>
+                        <th><a href="javascript:;">文件下载</a></th>
+                        <th><a href="javascript:;">客户服务</a></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="javascript:;">发展历程</a></td>
+                        <td><a href="javascript:;">XX资质</a></td>
+                        <td><a href="javascript:;">XX新闻</a></td>
+                        <td><a href="javascript:;">软件下载</a></td>
+                        <td><a href="javascript:;">交易服务</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="javascript:;">控股股东</a></td>
+                        <td><a href="javascript:;">XX资质</a></td>
+                        <td><a href="javascript:;">XX新闻</a></td>
+                        <td><a href="javascript:;">表单下载</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="javascript:;">XX资质</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="mianze">
+                    <span>免责声明</span>
+                </div>
+            </div>
+            <div class="right-ctx">
+                <span>联系我们</span>
+                <div class="right-ctx-lItem">
+                    <span>客服电话</span>
+                    <span>4008 908 168 <i>（内地24小时）</i></span>
+                    <span>852 1688 688 <i>（香港24小时）</i></span>
+                    <span>147 1503 5047 <i>（香港交易日）</i></span>
+                </div>
+                <div class="right-ctx-rItem">
+                    <span>扫描二维码添加微信公众号或下载客户端</span>
+                    <div class="qrcode">
+                        <img src="dist/img/header/qrcode1.png" />
+                        <span>日发服务号</span>
+                    </div>
+                    <div class="qrcode">
+                        <img src="dist/img/header/qrcode2.png" />
+                        <span>日发客户端</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container ">
+            <span>Copyright©2013日发国际金融有限公司.   沪ICP备12046937号. </span><br/>
+            <span> The content contained on this site is provided to users "AS IS" without any expressor implied warrantly.</span>
+        </div>
+    </div>
+
+</div>
+<script src="src/js/lib/jquery.min.js"></script>
+<script src="src/js/lib/bootstrap.min.js"></script>
+<script src="./dist/js/fetureIndex.js"></script>
+</body>
+</html>

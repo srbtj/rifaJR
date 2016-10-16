@@ -1,0 +1,97 @@
+.load-soft-left{
+  text-align: center;
+  float: left;
+  width : 310px;
+  margin-top:48px;
+}
+.load-soft-right{
+  margin-left : 325px;
+  span{
+    display: block;
+    font-size:12px;
+    color: #4c4c4c;
+    line-height:24px;
+  }
+  .load-soft-title{
+    line-height:60px;
+    color: #4c4c4c;
+    font-size:16px;
+    font-weight:500;
+  }
+
+  div{
+    margin-top:12px;
+
+    &.baseSize{
+      span{
+        font-size:14px;
+      }
+    }
+
+    .load-soft-second-title{
+      font-weight:500;
+    }
+
+    a{
+      margin-right:20px;
+      width : 175px;
+      height : 40px;
+      display: inline-block;
+    }
+
+    &.device-load{
+      a:nth-of-type(1){
+        background: url("../img/loadcenter/android-load.png") no-repeat;
+        -webkit-background-size:cover;
+        background-size:cover;
+
+        &:hover{
+          background-position-y: -44px;
+        }
+      }
+
+      a:nth-of-type(2){
+        background: url("../img/loadcenter/ios-load.png") no-repeat;
+        -webkit-background-size:cover;
+        background-size:cover;
+
+        &:hover{
+          background-position-y: -44px;
+        }
+      }
+    }
+
+    &.right-load,&.fontSize-load{
+      a{
+        width : 155px;
+        height: 40px;
+        -webkit-background-size:cover;
+        background-size:cover;
+      }
+    }
+
+    &.right-load{
+      a{
+        background: url("../img/loadcenter/lj-load-btn.png") no-repeat;
+        &:hover{
+          background-position-y: -44px;
+        }
+      }
+    }
+
+    &.fontSize-load{
+      a:nth-of-type(1){
+        background: url("../img/loadcenter/jf-load-btn.png") no-repeat;
+        &:hover{
+          background-position-y: -44px;
+        }
+      }
+      a:nth-of-type(2){
+        background: url("../img/loadcenter/ft-load-btn.png") no-repeat;
+        &:hover{
+          background-position-y: -44px;
+        }
+      }
+    }
+  }
+}

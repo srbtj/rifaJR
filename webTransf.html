@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no">
-    <title>首页</title>
+    <meta charset="UTF-8">
+    <title>功能介绍</title>
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./dist/css/rfNotice.css">
+    <link rel="stylesheet" href="./dist/css/webTransf.css">
     <!--[if lt IE 9]>
     <script src="/dist/js/lib/html5shiv.min.js"></script>
     <script src="/dist/js/lib/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
+<!-- 头部 -->
 <div id="header" class="container-fluid">
     <div class="header-top">
         <div class="container">
@@ -44,14 +46,14 @@
                 <img src="dist/img/header/logo.png"/>
             </a>
             <ul class="header-center-item">
-                <li class="active">
-                    <a href="index.html">
+                <li>
+                    <a href="javascript:;">
                         <span>选择日发</span>
                         <span>需求与解决方案</span>
                     </a>
                 </li>
-                <li>
-                    <a href="./bondIndex.html">
+                <li  class="active">
+                    <a href="javascript:;">
                         <span>证券</span>
                         <span>港股美股市场</span>
                     </a>
@@ -73,98 +75,65 @@
     </div>
 </div>
 
-<div id="rifa-wrap">
+<div id="web-wrap">
     <div class="banner">
         <a href="javascript:;">
-            <img src="dist/img/rfIndex/rf-banner.png" />
+            <img src="dist/img/bond/bond-banner.png" />
         </a>
+
+        <div class="banner-nav">
+            <div class="container banner-nav-text">
+                <a href="javascript:;" class="active">预约开户</a>
+                <a href="javascript:;" >股票交易</a>
+                <a href="loadCenter.html" >软件下载</a>
+                <a href="loadCenter.html" >表单下载</a>
+            </div>
+        </div>
     </div>
     <div class="container">
-        <div class="rifa-title">
-            <a href="javascript:;" ><span>日发首页</span></a>
-            <img src="./dist/img/rfIndex/notice-lg.png" alt="">
-            <span class="refa-banner-txt">最新通知</span>
-        </div>
-
-        <div class="rifa-ctx">
-            <ul class="rifa-list" role="tablist">
-                <li role="presentation"  class="active" data-title = "最新通知">
-                    <a href="#latestNotice" role="tab" data-toggle="tab">
-                        <span>最新通知</span>
-                        <span>Latest Notice</span>
-                    </a>
-                </li>
-                <li role="presentation" data-title = "日发活动">
-                    <a href="#rifaEvent" role="tab" data-toggle="tab">
-                        <span>日发活动</span>
-                        <span>RIFA event</span>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- 关于日发  发展历程  控股股东  资质查询  联系我们  免责声明 -->
-            <div class="tab-content rifa-item">
-                <!-- 最新通知 -->
-                <div role="tabpanel" class="tab-pane active" id="latestNotice">
-                    <a href="javascript:;">
-                        <span>重阳节交易时间通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>系统维护通知</span>
-                        <span>2016-09-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>日发证券APP系统维护通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>中秋节交易时间通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>香港悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>北京投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
+        <div class="web-container clear">
+            <div class="web-left clear">
+                <div class="rifa-title">
+                    <a href="javascript:;" ><span>证券首页</span></a>
+                    <img src="./dist/img/rfIndex/notice-lg.png" alt="">
+                    <a href="javascript:;" ><span>网上交易</span></a>
+                    <img src="./dist/img/rfIndex/notice-lg.png" alt="">
+                    <span class="refa-banner-txt">功能介绍</span>
                 </div>
-                <!-- 日发活动 -->
-                <div role="tabpanel" class="tab-pane" id="rifaEvent">
-                    <span class="rifa-item-title">中秋节交易时间通知</span>
+                <div class="web-left-desc">
+                    <span class="web-left-title">
+                        欢迎使用日发网上交易
+                    </span>
                     <div>
-                        <span>翌日假期证券交易时间通知    </span>
-                    </div>
-
-                    <div>
-                        <span>致：日发证券有限公司</span>
-                        <span>各位尊贵的客户</span>
-                        <span>根据交易所公告，重阳节翌日假期证券交易时间安排如下表：</span>
+                        <span>现在登录日发网上交易系统，无论何时、何地实现账户管理、查询、交易的需求，并享受到日发为您所提供的便捷、安全的交易服务。</span>
                     </div>
                     <div>
-                        <span>谢谢您的支持与配合.如有任何查询,可随时致电日发证券有限公司交易部4008-908-168或(852)3900-1781,敬请客户留意.以上通告内的交易时间仅供客户参考,且交易所有可能随时更改交易时间,本公司不保证此交易时间之准确性,客户可自行登陆各交易所网站查询最新之交易时间安排.具体时间以交易所最新通知为准.</span>
+                        <span>现在登录日发网上交易系统，无论何时、何地实现账户管理、查询、交易的需求，并享受到日发为您所提供的便捷、安全的交易服务。</span>
+                        <span>国内或国际资金出入金申请</span>
+                        <span>账单缴费</span>
+                        <span>纸质日结单、月结单申请</span>
+                        <span>个人信息修改</span>
+                        <span>新股申购，市场联动系列产品，第一时间掌控财富</span>
                     </div>
-                    <div class="rifa-times">
-                        <span>2016年9月28日</span>
-                        <span>日发证券有限公司</span>
-                        <span>客服部</span>
+                    <div>
+                        <span>实现轻松在线交易体验，请访问 istock.rffg.com.hk</span>
                     </div>
+                    <a href="javascript:;" class="transf-btn">股票交易</a>
                 </div>
-
+            </div>
+            <div class="web-right clear">
+                <div class="rifa-title">
+                    <span class="refa-banner-txt">网上交易介绍</span>
+                    <a class="web-click" href="javascript:;">MORE</a>
+                </div>
+                <div class="web-right-list">
+                    <a href="javascript">功能介绍</a>
+                    <a href="javascript">PC客户端下载</a>
+                </div>
             </div>
         </div>
 
-        <!-- 关于我们的联系方式 -->
+        <!-- 联系我们 -->
         <div class="about-us">
             <ul>
                 <li>
@@ -190,9 +159,7 @@
                 </li>
             </ul>
         </div>
-
     </div>
-
 </div>
 
 <div id="footer" class="container-fluid">
@@ -271,8 +238,6 @@
 </div>
 <script src="src/js/lib/jquery.min.js"></script>
 <script src="src/js/lib/bootstrap.min.js"></script>
-<script src="dist/js/rifaIndex.js"></script>
-</body>
-</html>
+<script src="./dist/js/webTransf.js"></script>
 </body>
 </html>
