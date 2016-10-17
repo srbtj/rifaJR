@@ -116,6 +116,8 @@
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          color: #666666;
+          font-size:14px;
         }
 
         span{
@@ -128,14 +130,27 @@
 
         a{
           float : right;
-          margin: 7px 25px 0 0;
-          width : 85px;
-          height : 34px;
-          background: url("../img/loadcenter/load-btn.png") no-repeat;
+          margin-right:25px;
+          margin-top:8px;
+          border-radius: 999px;
+          border : 1px solid #cccccc;
+          background-color: #fff;
+          padding : 0 35px 0 20px;
+          line-height:32px;
+          color: #2ebbe7;
+          position: relative;
 
-
+          &:after{
+            content: url("../img/loadcenter/form-load-btn.png");
+            position: absolute;
+            right:10px;
+            top : 4px;
+            width: 18px;
+            height: 18px;
+          }
           &:hover{
-            background: url("../img/loadcenter/load-btn-active.png") no-repeat;
+
+            background: #f5f5f5;
           }
         }
       }
