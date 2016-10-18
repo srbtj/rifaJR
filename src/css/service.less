@@ -1,0 +1,75 @@
+@import "public";
+@import "header";
+@import "notice-banner";
+@import "about-us";
+@import "investor_server";
+@import "footer";
+
+#service-wrap{
+  .service-content{
+    ul{
+      li{
+        width: 215px;
+        position: relative;
+
+        &:not(:last-child){
+          margin-right:28px;
+        }
+
+        a{
+          position: absolute;
+          bottom : -60px;
+          background-color: #2ebbe7;
+          border-radius: 999px;
+          border: 1px solid #2ebbe7;
+          padding: 10px 42px;
+          font-size: 14px;
+          color: #fff;
+
+          &:after{
+            content: '';
+            position: absolute;
+            background: url("../img/bond/load-arrow.png") no-repeat;
+            width: 18px;
+            height: 18px;
+            margin-left: 15px;
+            top: 10px;
+          }
+
+          &:hover {
+              background-color: #14aede;
+          }
+        }
+
+
+        img{
+          height: 45px;
+        }
+
+        &:nth-of-type(1){
+          img{
+            width:37px;
+          }
+        }
+
+        &:nth-of-type(2){
+          img{
+            width:44px;
+          }
+        }
+
+        &:nth-of-type(3){
+          img{
+            width:37px;
+          }
+        }
+
+        &:nth-of-type(4){
+          img{
+            width:47px;
+          }
+        }
+      }
+    }
+  }
+}
