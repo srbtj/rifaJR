@@ -17,7 +17,7 @@
     <div class="header-top">
         <div class="container">
             <div class="nav-left">
-                <a href="javascript:;" class="active">个人投资</a>
+                <a href="index.html" class="active">个人投资</a>
                 <a href="investor.html">投资移民</a>
                 <a href="service.html">专业机构服务</a>
             </div>
@@ -28,7 +28,7 @@
                     <a href="javascript:;">EN</a>
                 </li>
                 <li>
-                    <a href="rifaIndex.html">联系我们</a>
+                    <a href="rifaIndex.html?tab=4">联系我们</a>
                     <a href="javascript:;">
                         <span>客户服务</span>
                         <span class="clear">
@@ -57,13 +57,13 @@
                 <img src="dist/img/header/logo.png"/>
             </a>
             <ul class="header-center-item">
-                <li>
+                <li class="active">
                     <a href="index.html">
                         <span>选择日发</span>
                         <span>需求与解决方案</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./bondIndex.html">
                         <span>证券</span>
                         <span>港股美股市场</span>
@@ -84,6 +84,8 @@
             </ul>
         </div>
     </div>
+
+    <img src="dist/img/header/mobile-open.png" class="mobile-open" />
 </div>
 
 <div id="bond-wrap">
@@ -94,10 +96,10 @@
 
         <div class="banner-nav">
             <div class="container banner-nav-text">
-                <a href="javascript:;" class="active">预约开户</a>
-                <a href="javascript:;" >股票交易</a>
-                <a href="loadCenter.html" >软件下载</a>
-                <a href="loadCenter.html" >表单下载</a>
+                <a href="javascript:;">预约开户</a>
+                <a href="https://istock.rffg.com.hk/mts.web/Web2/login/istar/#gb" target="_blank">股票交易</a>
+                <a href="loadCenter.html?tab=0" >软件下载</a>
+                <a href="loadCenter.html?tab=1" >表单下载</a>
             </div>
         </div>
     </div>
@@ -177,7 +179,7 @@
                                 <span>移动投资</span>
                                 <span>随时随地查看您的投资情况</span>
                                 <span>低流量的移动服务使用</span>
-                                <a href="javascript:;">股票交易</a>
+                                <a href="https://istock.rffg.com.hk/mts.web/Web2/login/istar/#gb">股票交易</a>
                             </li>
                             <li>
                                 <img src="dist/img/bond/2-2.png" />
@@ -213,7 +215,7 @@
                                 <img src="dist/img/bond/4-1.png" />
                                 <span>价格优惠</span>
                                 <span>点击下方按钮查看我们的费用明细表格</span>
-                                <a href="javascript:;">费用明细表</a>
+                                <a type="button" data-toggle="modal" data-target="#money-modal">费用明细表</a>
                             </li>
                         </ul>
                     </div>
@@ -226,7 +228,7 @@
                                 <img src="dist/img/bond/5-1.png" />
                                 <span>细致入微</span>
                                 <span>我们准备了详细的常见问题清单，从各种角度为您答疑解惑</span>
-                                <a href="javascript:;">常见问题</a>
+                                <a type="button" data-toggle="modal" data-target="#question-modal">常见问题</a>
                             </li>
                         </ul>
                     </div>
@@ -244,7 +246,7 @@
                 <li>
                     <span>联络我们</span>
                     <span>另外，您亦可填写有关表格，我们<br/> 会尽快与您联络</span>
-                    <a href="javascript:;">
+                    <a href="rifaIndex.html?tab=4">
                         <span>联络我们</span>
                         <img src="dist/img/header/about-arrow.png" />
                     </a>
@@ -252,7 +254,7 @@
                 <li>
                     <span>服务地址</span>
                     <span>请用我们的寻找分行功能，随时<br/> 联络我们各分行</span>
-                    <a href="javascript:;">
+                    <a href="rifaIndex.html?tab=4">
                         <span>分行地址</span>
                         <img src="dist/img/header/about-arrow.png" />
                     </a>
@@ -272,39 +274,40 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th><a href="rifaIndex.html">关于日发</a> </th>
-                        <th><a href="rifaIndex.html">资质查询</a></th>
-                        <th><a href="javascript:;">新闻发布</a></th>
-                        <th><a href="loadCenter.html">文件下载</a></th>
-                        <th><a href="javascript:;">客户服务</a></th>
+                        <th><a href="rifaIndex.html?tab=0">关于日发</a> </th>
+                        <th><a href="rifaIndex.html?tab=3">资质查询</a></th>
+                        <th><a href="rifaNotice.html?tab=0">新闻发布</a></th>
+                        <th><a href="loadCenter.html?tab=1">文件下载</a></th>
+                        <!--<th><a href="javascript:;">客户服务</a></th>-->
+                        <th><a href="webTransf.html">交易服务</a></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td><a href="rifaIndex.html">发展历程</a></td>
-                        <td><a href="javascript:;">XX资质</a></td>
-                        <td><a href="javascript:;">XX新闻</a></td>
-                        <td><a href="loadCenter.html">软件下载</a></td>
+                        <td><a href="rifaIndex.html?tab=1">发展历程</a></td>
+                        <td><a href="javascript:;"></a></td>
+                        <td><a href="javascript:;"></a></td>
+                        <td><a href="loadCenter.html?tab=0">软件下载</a></td>
                         <td><a href="webTransf.html">交易服务</a></td>
                     </tr>
                     <tr>
-                        <td><a href="rifaIndex.html">控股股东</a></td>
-                        <td><a href="javascript:;">XX资质</a></td>
-                        <td><a href="javascript:;">XX新闻</a></td>
-                        <td><a href="loadCenter.html">表单下载</a></td>
+                        <td><a href="rifaIndex.html?tab=2">控股股东</a></td>
+                        <td><a href="javascript:;"></a></td>
+                        <td><a href="javascript:;"></a></td>
+                        <td><a href="loadCenter.html?tab=1">表单下载</a></td>
                         <td></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td><a href="javascript:;">XX资质</a></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <!--<tr>-->
+                    <!--<td></td>-->
+                    <!--<td><a href="javascript:;">XX资质</a></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--</tr>-->
                     </tbody>
                 </table>
                 <div class="mianze">
-                    <a href="rifaIndex.html">免责声明</a>
+                    <a href="rifaIndex.html?tab=5">免责声明</a>
                 </div>
             </div>
             <div class="right-ctx">
@@ -331,15 +334,20 @@
     </div>
     <div class="footer-bottom">
         <div class="container ">
+
+            <div class="foot-mobile-info">
+                <span>Email:Email：cs@istartrade.com <br/>服务热线：4008 908 168 （内地24小时）</span>
+            </div>
             <span>Copyright©2013日发国际金融有限公司.   沪ICP备12046937号. </span><br/>
             <span> The content contained on this site is provided to users "AS IS" without any expressor implied warrantly.</span>
+            <span class="foot-mobile-txt">本网站所有资讯与说明文字仅供参考，如有与本公司相关公告及基金法律文件不符，以相关公告及基金法律文件为准。市场有风险，投资需谨慎。</span>
         </div>
     </div>
 
 </div>
 
 
-<!--模态对话框-->
+<!--模态对话框  交易时间 -->
 <div class="modal fade" id="bond-modal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -394,6 +402,142 @@
         </div>
     </div>
 </div>
+
+<!--模态对话框  手续费用 -->
+<div class="modal fade" id="money-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <h4>常见问题——股市术语基础知识</h4>
+                <span class="btn-close" data-dismiss="modal">X</span>
+                <div class="question-info">
+                    <span class="question-title">股市术语集锦</span>
+                    <div class="question-info-left">
+                        <div>
+                            <span class="info-title">开盘价：</span>
+                            <span>今开即今天的开盘价，如果开市后一段时间内（通常为半小时）某种证券没有买卖或没有成交，则取前一日的收盘价作为当日证券的开盘价。如果某证券连续数日未成交，则由证券交易所的场内中介经纪人根据客户对该证券买卖委托的价格走势提出指导价，促使成交后作为该证券的开盘价。在无形化交易市场中，如果某种证券连续数日未成交，以前一日的收盘价作为它的开盘价。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">收盘价：</span>
+                            <span>昨收即上一个交易日的收盘价，正常运作情况下，港股的收市价是按交易日最后一分钟内五个按盘价的中位数计算。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">最高价：</span>
+                            <span>指某种证券在每个交易日从开市到收市的交易过程中所产生的最高价格。如果当日该种证券成交价格没有发生变化，最高价就是即时价；若当日该种证券停牌，则最高价就是前收市价。最高价有时是一笔但有时会有几笔.</span>
+                        </div>
+                        <div>
+                            <span class="info-title">最代价：</span>
+                            <span>最低价指某种证券在每个交易日从开市到收市的交易过程中所产生的最低价格。 如果当日该种证券成交价格没有发生变化，最低价就是即时价；若当日该种证券停牌，则最低价就是前收市价。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">手：</span>
+                            <span>它是国际上通用的计算成交股数的单位。必须是手的整数倍才能办理交易。例：每手100股即必须以100股为一手进行交易。即购买股票（或卖出股票）至少必须购买（或卖出）100股。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">成交量：</span>
+                            <span>成交量指当天成交的股票总手数，需要注意的是，通常人们说的大盘成交量指的是成交金额</span>
+                        </div>
+                        <div>
+                            <span class="info-title">成交额：</span>
+                            <span>成交额，指该交易日成交股票的金额总数</span>
+                        </div>
+                        <div>
+                            <span class="info-title">价位：</span>
+                            <span>指喊价的升降单位。价位的高低随股票的每股市价的不同而异。以上海证券交易所为例：每股市价末满100元价位是0.10元，每股市价100-200元价位是0.20元每股市价200-300元价位是0.30元，每股市价300-400元价位是0.50元每股市价400元以上价位是1.00元</span>
+                        </div>
+                        <div>
+                            <span class="info-title">停牌：</span>
+                            <span>股票由于某种消息或进行某种活动引起股价的连续上涨或下跌，由证券交易所暂停其在股票市场上进行交易。待情况澄清或企业恢复正常后，再复牌在交易所挂牌交易</span>
+                        </div>
+                        <div>
+                            <span class="info-title">涨跌：</span>
+                            <span>以每天的收盘价与前一天的收盘价相比较，来决定股票价格是涨还是跌。一般在交易台上方的公告牌上用"+""-"号表示。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">涨(跌)停板：</span>
+                            <span>交易所规定的股价一天中涨（跌）最大幅度为前一日收盘价的百分数，不能超过此限，否则自动停止交易。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">市盈率：</span>
+                            <span>市盈率是某种股票每股市价与每股盈利的比率。（市盈率＝普通股每股市场价格÷普通股每年每股盈利）上式中的分子是当前的每股市价，分母可用最近一年盈利，也可用未来一年或几年的预测盈利。市盈率是估计普通股价值的最基本、最重要的指标之一。一般认为该比率保持在20－30之间是正常的，过小说明股价低，风险小，值得购买；过大则说明股价高，风险大，购买时应谨慎。但高市盈率股票多为热门股，低市盈率股票可能为冷门股。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">周转率：</span>
+                            <span>成交额，指该交易日成交股票的金额总数</span>
+                        </div>
+                        <div>
+                            <span class="info-title">成交额：</span>
+                            <span>成交额，指该交易日成交股票的金额总数</span>
+                        </div>
+                        <div>
+                            <span class="info-title">成交额：</span>
+                            <span>成交额，指该交易日成交股票的金额总数</span>
+                        </div>
+                    </div>
+                    <div class="question-info-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--模态对话框  常见问题 -->
+<div class="modal fade" id="question-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <h4>交易时间表</h4>
+                <span class="btn-close" data-dismiss="modal">X</span>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th colspan="2">交易时间 </th>
+                        <th>全日时间 </th>
+                        <th>半日时间 </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>竞价时段</td>
+                        <td>开市前时段</td>
+                        <td>芝加哥商业交易所</td>
+                        <td>1月</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">持续交易时段</td>
+                        <td>早市</td>
+                        <td>上午9时30分至中午12时正</td>
+                        <td>上午9时30分至中午12时正</td>
+                    </tr>
+                    <tr>
+                        <td class="normal-color">延续早市</td>
+                        <td>中午12时正至下午1时正</td>
+                        <td>不适用</td>
+                    </tr>
+                    <tr>
+                        <td class="normal-color">午市</td>
+                        <td>下午1时正至下午4时正</td>
+                        <td>不适用</td>
+                    </tr>
+                    <tr>
+                        <td>竞价时段</td>
+                        <td>收市竞价交易时段</td>
+                        <td>下午4时正至下午4时08分与下午4时10分之间随机收市</td>
+                        <td>1月</td>
+                    </tr>
+                    <tr>
+                        <td>备注</td>
+                        <td colspan="3">在圣诞前夕、新年前夕及农历新年前夕，将没有延续早市及午市交易。 要是当天没有早市交易，当天也不会有延续早市交易。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="src/js/lib/jquery.min.js"></script>
 <script src="src/js/lib/bootstrap.min.js"></script>
