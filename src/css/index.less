@@ -326,6 +326,11 @@
     float: left;
     margin-top: 16px;
     margin-bottom: 58px;
+
+    /** 出入金说明 **/
+    .in-out-desc{
+    }
+
     .bond-title,
     .forward-title,
     .money-title {
@@ -441,6 +446,9 @@
   }
 }
 
+.mobile-banner,.mobile-nav-open{
+  display: none;
+}
 
 @media all and (max-width: 750px){
 
@@ -448,6 +456,64 @@
 
   html{
     font-size:50px;
+  }
+
+  /** 移动端面导航栏 ***/
+  .mobile-nav-open{
+    display: none;
+    position : fixed;
+    z-index : 20;
+    top : 0;
+    bottom : 0;
+    width : 100%;
+    background-color: #181818;
+    .mobile-nav-title{
+
+      height: 120 / @rem;
+      line-height:120 / @rem;
+      position: relative;
+      left : 0;
+      right : 0;
+      img{
+        position: absolute;
+
+        &:nth-of-type(1){
+          width: 24 / @rem;
+          height: 24 / @rem;
+          left : 40 / @rem;
+          top : 50%;
+          margin-top : -12 / @rem!important;
+        }
+
+        &:nth-of-type(2){
+          width: 314 / @rem;
+          height: 66 / @rem;
+          left : 50%;
+          top : 50%;
+          margin-left : -157 / @rem;
+          margin-top : -33 / @rem;
+        }
+      }
+    }
+
+    .mobile-nav-ctx{
+      position: relative;
+      span{
+        display: block;
+        color: #ffffff;
+        margin:0 70 / @rem;
+        line-height:100 / @rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom : 1 / @rem solid #505050;
+        font-size: 32 / @rem;
+      }
+
+      span:nth-of-type(1){
+        margin-top: 60 / @rem;
+      }
+    }
   }
 
   .container {
@@ -545,7 +611,7 @@
     }
 
     .carousel-indicators{
-      bottom : -60 / @rem;
+      bottom : -80 / @rem;
       li{
         width : 20 / @rem;
         height : 20 / @rem;
@@ -718,7 +784,7 @@
       a{
         top : 200 / @rem !important;
         left : 50% !important;
-        margin-left:-80 / @rem !important;
+        //margin-left:-80 / @rem !important;
         span{
           padding : 10 / @rem 40 / @rem !important;
           font-size: 28 / @rem;
@@ -740,26 +806,34 @@
     height: auto!important;
 
     margin-top: 40 / @rem !important;
+
+    .mobile-img,.mobile-btn{
+      display: block;
+      img{
+        display: inline-block;
+      }
+    }
     li{
       width:100% !important;
+      border-right : none!important;
       border-bottom : 1px solid #e7e7e7;
+      &:nth-of-type(3){
+        border : none;
+      }
+
       border-right:none;
       margin:0 !important;
       padding: 1rem 0;
+      text-align: center;
 
-      span:nth-of-type(1){
-        display: inline;
+      .mobile-img{
+        display: inline-block;
+
       }
       span:nth-of-type(1){
-        position: relative;
-        font-size: 36 / @rem!important;
-        &:before{
-          width: 40 / @rem !important;
-          height: 40 / @rem !important;
-          left: -40 / @rem !important;
-
-        }
+        display: none;
       }
+
       span:nth-of-type(2){
         display: block;
         padding: 0!important;
@@ -767,14 +841,47 @@
         width: 100%;
         margin-top: 40 / @rem !important;
         font-size: 24 / @rem!important;
+        color: #333;
       }
-      a{
-        display: inline-block!important;
-        position: relative!important;
-        margin-top:40 / @rem !important;
-        font-size:28 / @rem !important;
+      
+      a:nth-of-type(1){
+        display: none;
         img{
-          right : 0!important;
+          display: none;
+        }
+      }
+
+      &:nth-of-type(1){
+        img{
+          width:196 / @rem;
+          height: 40 / @rem;
+        }
+      }
+
+      &:nth-of-type(2){
+        img{
+          width:203 / @rem;
+          height: 44 / @rem;
+        }
+      }
+
+      &:nth-of-type(3){
+        img{
+          width:196 / @rem;
+          height: 44 / @rem;
+        }
+      }
+      
+      a:nth-of-type(2){
+        position: relative!important;
+        display: inline-block;
+
+        img{
+          position: relative!important;
+          left : 0 !important;
+          top : 0 !important;
+          width: 270 / @rem;
+          height: 70 / @rem;
         }
       }
     }
@@ -784,7 +891,75 @@
     display: none;
   }
   
+  .mobile-banner{
+    display: block;
+    line-height: 130 / @rem;
+    background-color: #eeeeee;
+    padding:0 40 / @rem;
+    a{
+      color: #666666;
+      font-size:28 / @rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+
+      &:nth-of-type(4){
+        text-align: right;
+      }
+
+      &:nth-of-type(2),&:nth-of-type(3){
+        text-align: center;
+      }
+    }
+  }
+  
   #footer{
-    display: none;
+
+    .footer-top{
+      display: none;
+    }
+
+    .footer-bottom{
+      height:auto!important;
+
+
+      .container{
+        padding : 0 40 / @rem 72 / @rem !important ;
+      }
+    }
+    .footer-bottom div{
+
+      > span{
+        font-size: 20 / @rem;
+        color: #999;
+        line-height: 34 / @rem !important;
+      }
+      .foot-mobile-info,.foot-mobile-txt{
+        display: block;
+      }
+
+      .foot-mobile-info{
+        margin : 38 / @rem 0 28 / @rem;
+        span{
+          font-size: 26 / @rem;
+          color: #999;
+          line-height: 50 / @rem !important;
+        }
+      }
+
+    }
+
+    .foot-mobile-info{
+
+    }
+
+  }
+
+
+  #header,#footer,#myCarousel,.banner-nav{
+    max-width : 750 / @rem !important;
+    min-width : 320 / @rem !important;
   }
 }

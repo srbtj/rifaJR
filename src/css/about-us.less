@@ -94,9 +94,9 @@
       }
 
       &:nth-of-type(2),&:nth-of-type(3){
-        > a {
+        > a:nth-of-type(1) {
           display: block;
-          margin-top : 16px;
+          margin-top : 25px;
           position: relative;
 
           span{
@@ -124,5 +124,9 @@
         }
       }
     }
+  }
+  
+  .mobile-img,.mobile-btn,.mobile-btn img{
+    display: none;
   }
 }

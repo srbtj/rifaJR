@@ -90,21 +90,20 @@
 </div>
 
 
-<!-- mobile -->
-<!--<div class="mobile-nav-open">-->
-    <!--<div class="mobile-nav-title">-->
-        <!--<img src="dist/img/header/mobile-close.png" />-->
-        <!--<img src="dist/img/header/mobile-open-logo.png" />-->
-    <!--</div>-->
-    <!--<div class="mobile-nav-ctx">-->
-        <!--<span data-href="javascript:;">选择日发</span>-->
-        <!--<span data-href="javascript:;">证券</span>-->
-        <!--<span data-href="javascript:;">期货</span>-->
-        <!--<span data-href="javascript:;">理财</span>-->
-        <!--<span data-href="javascript:;">联系我们</span>-->
-        <!--<span data-href="javascript:;">关注微信</span>-->
-    <!--</div>-->
-<!--</div>-->
+<div class="mobile-nav-open">
+    <div class="mobile-nav-title">
+        <img src="dist/img/header/mobile-close.png" class="closeImg"/>
+        <img src="dist/img/header/mobile-open-logo.png" />
+    </div>
+    <div class="mobile-nav-ctx">
+        <span data-href="index.html">选择日发</span>
+        <span data-href="bondIndex.html">证券</span>
+        <span data-href="feturesIndex.html">期货</span>
+        <span data-href="javascript:;">理财</span>
+        <span data-href="rifaIndex.html?tab=4">联系我们</span>
+        <span data-href="javascript:;">关注微信</span>
+    </div>
+</div>
 
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -125,8 +124,8 @@
                 <div class="container banner-nav-text">
                     <a href="javascript:;" class="active">预约开户</a>
                     <a href="https://istock.rffg.com.hk/mts.web/Web2/login/istar/#gb" >股票交易</a>
-                    <a href="loadCenter.html" >软件下载</a>
-                    <a href="loadCenter.html" >表单下载</a>
+                    <a href="loadCenter.html?tab=0" >软件下载</a>
+                    <a href="loadCenter.html?tab=1" >表单下载</a>
                 </div>
             </div>
         </div>
@@ -198,25 +197,25 @@
                     </div>
                     <ul class="news-list">
                         <li>
-                            <a href="javascript:;">
+                            <a href="rifaNoticeDetail.html">
                                 <span>中秋节交易时间通知</span>
                                 <span>09/18</span>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="rifaNoticeDetail.html">
                                 <span>系统维护通知</span>
                                 <span>09/18</span>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="rifaNoticeDetail.html">
                                 <span>深圳华侨城悠投资咖啡馆周六开始营业的公告六开始营业的公</span>
                                 <span>09/18</span>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="rifaNoticeDetail.html">
                                 <span>中秋节交易时间通知</span>
                                 <span>09/18</span>
                             </a>
@@ -238,23 +237,23 @@
                 <div class="wrap-right-item">
                     <div>
                         <span>表单下载</span>
-                        <a href="feturesIndex.html"class="load-more">MORE</a>
+                        <a href="loadCenter.html?tab=1"class="load-more">MORE</a>
                     </div>
                     <ul class="form-list">
                         <li>
-                            <a href="javascript:;">
+                            <a href="loadCenter.html?tab=1&bannerTab=0">
                                 <span>期货资料类</span>
                                 <!--<img src="dist/img/header/more.png" />-->
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="loadCenter.html?tab=1&bannerTab=1">
                                 <span>证券资料类</span>
                                 <!--<img src="dist/img/header/more.png" />-->
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="loadCenter.html?tab=1&bannerTab=2">
                                 <span>投资移民类</span>
                                 <!--<img src="dist/img/header/more.png" />-->
                             </a>
@@ -270,7 +269,7 @@
             <div class="bond-title">
                 <div>
                     <span>证券</span>
-                    <a href="javascript:;">MORE</a>
+                    <a href="bondIndex.html">MORE</a>
                 </div>
             </div>
             <div class="bont-txt">
@@ -285,11 +284,11 @@
                 </div>
                 <div class="bond-right">
                     <div>
-                        <a href="javascript:;">出入金说明</a>
+                        <a href="javascript:;" class="in-out-desc">出入金说明</a>
                         <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案</span>
                     </div>
 
-                    <a href="javascript:;">
+                    <a href="bondIndex.html">
                         <span>了解更多</span>
                         <img src="dist/img/header/load-more.png" />
                     </a>
@@ -302,7 +301,7 @@
             <div class="forward-title">
                 <div>
                     <span>期货</span>
-                    <a href="javascript:;">MORE</a>
+                    <a href="feturesIndex.html">MORE</a>
                 </div>
             </div>
             <div class="forward-txt">
@@ -312,7 +311,7 @@
                         <span>一次开户，全品类的投资，专业投资需求一站式解决方案平台全品类的投资，专业投资需求一站式解决方案平台。专业投资需求一站式解决方案</span>
                     </div>
 
-                    <a href="javascript:;">
+                    <a href="feturesIndex.html">
                         <span>了解更多</span>
                         <img src="dist/img/header/load-more.png" />
                     </a>
@@ -365,24 +364,33 @@
         <div class="about-us">
             <ul>
                 <li>
+                    <img src="dist/img/header/call-us.png" class="mobile-img"/>
                     <span>致电我们</span>
                     <span>欢迎致电我们的客户代表直接对话</span>
                     <span>800 820 8088</span>
                 </li>
                 <li>
+                    <img src="dist/img/header/web-us.png" class="mobile-img"/>
                     <span>联络我们</span>
                     <span>另外，您亦可填写有关表格，我们会尽快与您联络</span>
-                    <a href="javascript:;">
+                    <a href="rifaIndex.html?tab=4">
                         <span>联络我们</span>
                         <img src="dist/img/header/about-arrow.png" />
                     </a>
+                    <a href="rifaIndex.html?tab=4" class="mobile-btn">
+                        <img src="dist/img/header/web-us-btn.png">
+                    </a>
                 </li>
                 <li>
+                    <img src="dist/img/header/service-address.png" class="mobile-img"/>
                     <span>服务地址</span>
                     <span>请用我们的寻找分行功能，随时联络我们各分行</span>
-                    <a href="javascript:;">
+                    <a href="rifaIndex.html?tab=4">
                         <span>分行地址</span>
                         <img src="dist/img/header/about-arrow.png" />
+                    </a>
+                    <a href="rifaIndex.html?tab=4" class="mobile-btn">
+                        <img src="dist/img/header/service-address-btn.png">
                     </a>
                 </li>
             </ul>
@@ -390,6 +398,13 @@
     </div>
 </div>
 
+
+<div class="mobile-banner clear">
+    <a href="index.html">选择日发</a>
+    <a href="bondIndex.html">证券</a>
+    <a href="feturesIndex.html">期货</a>
+    <a href="">理财</a>
+</div>
 <div id="footer" class="container-fluid">
     <div class="footer-top">
         <div class="foot-top-bg-left"></div>
@@ -458,8 +473,13 @@
     </div>
     <div class="footer-bottom">
         <div class="container ">
+
+            <div class="foot-mobile-info">
+                <span>Email:Email：cs@istartrade.com <br/>服务热线：4008 908 168 （内地24小时）</span>
+            </div>
             <span>Copyright©2013日发国际金融有限公司.   沪ICP备12046937号. </span><br/>
             <span> The content contained on this site is provided to users "AS IS" without any expressor implied warrantly.</span>
+            <span class="foot-mobile-txt">本网站所有资讯与说明文字仅供参考，如有与本公司相关公告及基金法律文件不符，以相关公告及基金法律文件为准。市场有风险，投资需谨慎。</span>
         </div>
     </div>
 

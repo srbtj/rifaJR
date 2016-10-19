@@ -9,10 +9,26 @@
             $(this).addClass('active').siblings().removeClass('active');
         })
     }
+
+    /** 移动端 显示导航栏 **/
+    $('#header .mobile-open').on('click',function(){
+        $('.mobile-nav-open').show();
+    });
+
+    $('.mobile-nav-open').on('click','.closeImg',function(){
+        $('.mobile-nav-open').hide();
+    }).on('click','span',function(e){
+        console.log(e.currentTarget);
+        var target = e.currentTarget;
+        var href = $(target).attr('data-href');
+        //$('.mobile-nav-open').hide();
+        window.location.href = href;
+    });
+
+
 }));
 
-
-
+/*** 动态设置 html 字体大小 **/
 (function (doc, win, undefined) {
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in win? 'orientationchange' : 'resize',

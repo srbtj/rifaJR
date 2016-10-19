@@ -24,7 +24,7 @@
             var clientWidth = docEl.clientWidth;
 
             if(clientWidth > 750)  return;
-            console.log('------>>>>',clientWidth);
+            //console.log('------>>>>',clientWidth);
             if (clientWidth === undefined) return;
             docEl.style.fontSize = 50 * (clientWidth / 750) + 'px';
         };
