@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width,user-scalable=no">-->
     <title>证券首页</title>
-    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/css/bondIndex.css">
     <!--[if lt IE 9]>
     <script src="/dist/js/lib/html5shiv.min.js"></script>
@@ -57,13 +57,13 @@
                 <img src="dist/img/header/logo.png"/>
             </a>
             <ul class="header-center-item">
-                <li class="active">
+                <li>
                     <a href="index.html">
                         <span>选择日发</span>
                         <span>需求与解决方案</span>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="./bondIndex.html">
                         <span>证券</span>
                         <span>港股美股市场</span>
@@ -131,7 +131,7 @@
             <a href="javascript:;">交易时间</a>
             <a href="javascript:;">手续费用</a>
             <a href="javascript:;">常见问题</a>
-            <a href="javascript:;">网上交易</a>
+            <a href="webTransf.html">网上交易</a>
         </div>
 
         <div class="bond-detail">
@@ -288,7 +288,7 @@
                         <td><a href="javascript:;"></a></td>
                         <td><a href="javascript:;"></a></td>
                         <td><a href="loadCenter.html?tab=0">软件下载</a></td>
-                        <td><a href="webTransf.html">交易服务</a></td>
+                        <td><a href="webTransf.html"></a></td>
                     </tr>
                     <tr>
                         <td><a href="rifaIndex.html?tab=2">控股股东</a></td>
@@ -307,7 +307,7 @@
                     </tbody>
                 </table>
                 <div class="mianze">
-                    <a href="rifaIndex.html?tab=5">免责声明</a>
+                    <a href="rifaIndex.html?tab=6">免责声明</a>
                 </div>
             </div>
             <div class="right-ctx">
@@ -321,12 +321,12 @@
                 <div class="right-ctx-rItem">
                     <span>扫描二维码添加微信公众号或下载客户端</span>
                     <div class="qrcode">
-                        <img src="dist/img/header/wx-code.png" />
-                        <span>日发服务号</span>
+                        <img src="dist/img/header/ios.png" />
+                        <span>IOS客户端</span>
                     </div>
                     <div class="qrcode">
-                        <img src="dist/img/header/qrcode2.png" />
-                        <span>日发客户端</span>
+                        <img src="dist/img/header/android.png" />
+                        <span>Android客户端</span>
                     </div>
                 </div>
             </div>
@@ -345,6 +345,7 @@
     </div>
 
 </div>
+
 
 
 <!--模态对话框  交易时间 -->
@@ -404,14 +405,14 @@
 </div>
 
 <!--模态对话框  手续费用 -->
-<div class="modal fade" id="money-modal">
+<div class="modal fade" id="question-modal">
     <div class="modal-dialog">
         <div class="modal-content">
 
             <div class="modal-body">
                 <h4>常见问题——股市术语基础知识</h4>
                 <span class="btn-close" data-dismiss="modal">X</span>
-                <div class="question-info">
+                <div class="question-info clear">
                     <span class="question-title">股市术语集锦</span>
                     <div class="question-info-left">
                         <div>
@@ -464,18 +465,397 @@
                         </div>
                         <div>
                             <span class="info-title">周转率：</span>
-                            <span>成交额，指该交易日成交股票的金额总数</span>
+                            <span>股票交易的股数占交易所上市流通的股票股数的百分比。</span>
                         </div>
                         <div>
-                            <span class="info-title">成交额：</span>
-                            <span>成交额，指该交易日成交股票的金额总数</span>
+                            <span class="info-title">换手率：</span>
+                            <span>“换手率”也称“周转率”，指在一定时间内市场中股票转手买卖的频率 某一段时期内的成交量/发行总股数×100%</span>
                         </div>
                         <div>
-                            <span class="info-title">成交额：</span>
-                            <span>成交额，指该交易日成交股票的金额总数</span>
+                            <span class="info-title">振幅：</span>
+                            <span>振幅是指开盘后最高价、最低价之差的绝对值与股价的百分比</span>
+                        </div>
+                        <div>
+                            <span class="info-title">市值：</span>
+                            <span>市值是指一家上市公司的发行股份按市场价格计算出来的股票总价值，其计算方法为每股股票的市场价格乘以发行总股数。整个股市上所有上市公司的市值总和，即为股票总市值。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">量比：</span>
+                            <span>量比是衡量相对成交量的指标。它是指股市开市后平均每分钟的成交量与过去5个交易日平均每分钟成交量之比。其计算公式为：量比=（现成交总手数/现累计开市时间(分)）/过去5日平均每分钟成交量</span>
+                        </div>
+                        <div>
+                            <span class="info-title">市净率：</span>
+                            <span>市净率指的是每股股价与每股净资产的比率。市净率可用于投资分析，一般来说市净率较低的股票，投资价值较高，相反，则投资价值较低；但在判断投资价值时还要考虑当时的市场环境以及公司经营情况、盈利能力等因素。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">认股权证：</span>
+                            <span>股票发行公司增发新股票时，发给公司原股东的以优惠价格购买一定数量股票的证书。认股权证通常都有时间限制，过时无效。在有效期内持有人可以将其卖出或转让。</span>
+                        </div>
+                        <div>
+                            <span class="info-title">除权：</span>
+                            <span>股票除权前一日收盘价减去所含权的差价，即为除权。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">派息：</span>
+                            <span>股票前一日收盘价减去上市公司发放的股息称为派息。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">含权：</span>
+                            <span>凡是有股票有权未送配的均称含权。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">填权：</span>
+                            <span>除权后股价上升，将除权差价补回，称为填权。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">增资：</span>
+                            <span>上市公司为业务需求经常会办理增资（有偿配股）或资本公积新增资（无偿配股）。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">配股：</span>
+                            <span>公司增发新股时，按股东所有人份数，以特价（低于市价）分配给股东认购。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">牛市：</span>
+                            <span>股票市场上买入者多于卖出者，股市行情看涨称为牛市。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">熊市：</span>
+                            <span>熊市与牛市相反。股票市场上卖出者多于买入者，股市行情看跌称为熊市。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">绩优股：</span>
+                            <span>是指那些业绩优良，但增长速度较慢的公司的股票。这类公司有实力抵抗经济衰退，但这类公司并不能给你带来振奋人心的利润。因为这类公司业务较为成熟，不需要花很多钱来扩展业务，所以投资这类公司的目的主要在于拿股息。另外，投资这类股票时，市盈率不要太高，同时要注意股价在历史上经济不景气时波动的记录。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">热门股：</span>
+                            <span>是指交易量大、流通性强、股价变动幅度较大的股票。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">成长股：</span>
+                            <span>是指这样一些公司所发行的股票，它们的销售额和利润额持续增长，而且其速度快于整个国家和本行业的增长。这些公司通常有宏图伟略，注重科研，留有大量利润作为再投资以促进其扩张。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">升高盘：</span>
+                            <span>是指开盘价比前一天收盘价高出许多。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">开低盘：</span>
+                            <span>是指开盘价比前一天收盘价低出许多。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">盘档：</span>
+                            <span>是指投资者不积极买卖，多采取观望态度，使当天股价的变动幅度很小，这种情况称为盘档。。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">整理：</span>
+                            <span>是指股价经过一段急剧上涨或下跌后，开始小幅度波动，进入稳定变动阶段，这种现象称为整理，整理是下一次大变动的准备阶段。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">跳空：</span>
+                            <span>指受强烈利多或利空消息刺激，股价开始大幅度跳动。跳空通常在股价大变动的开始或结束前出现。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">回档：</span>
+                            <span>是指股价上升过程中，因上涨过速而暂时回跌的现象。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">反弹：</span>
+                            <span>是指在下跌的行情中，股价有时由于下跌速度太快，受到买方支撑暂时回升的现象。反弹幅度较下跌幅度小，反弹后恢复下跌趋势。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">多头：</span>
+                            <span>对股票后市看好，先行买进股票，等股价涨至某个价位，卖出股票赚取差价的人。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">空头：</span>
+                            <span>是指认为股价已上涨到了最高点，很快便会下跌，或当股票已开始下跌时，认为还会继续下跌，趁高价时卖出的投资者。</span>
                         </div>
                     </div>
-                    <div class="question-info-right"></div>
+                    <div class="question-info-right">
+
+
+                        <div>
+                            <span class="info-title">多头市场：</span>
+                            <span>也称牛市，就是股票价格普遍上涨的市场。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">空头市场：</span>
+                            <span>股价呈长期下降趋势的市场，空头市场中，股价的变动情况是大跌小涨。亦称熊市。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">多翻空：</span>
+                            <span>原本看好行情的多头，看法改变，卖出手中的股票，有时还借股票卖出，这种行为称为翻空或多翻空。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">空翻多：</span>
+                            <span>原本作空头者，改变看法，把卖出的股票买回，有时还买进更多的股票，这种行为称为空翻多。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">买空：</span>
+                            <span>预计股价将上涨，因而买入股票，在实际交割前，再将买入的股票卖掉，实际交割时收取差价或补足差价的一种投机行为。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">卖空：</span>
+                            <span>预计股价将下跌，因而卖出股票，在发生实际交割前，将卖出股票如数补进，交割时，只结清差价的投机行为。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">利空：</span>
+                            <span>促使股价下跌，对空头有利的因素和消息。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">利多：</span>
+                            <span>是刺激股价上涨，对多头有利的因素和消息。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">套牢：</span>
+                            <span>是指预期股价上涨，不料买进后，股价路下跌；或是预期股价下跌，卖出股票后，股价却一路上涨，前者称多头套牢，后者是空头套牢。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">大户：</span>
+                            <span>就是大额投资人，例如财团、信托公司以及其它拥有庞大资金的集团或个人。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">中户：</span>
+                            <span>指投资额较大的投资人。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">散户：</span>
+                            <span>就是买卖股票数量很少的小额投资者。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">经纪人：</span>
+                            <span>执行客户命令，买卖证券、商品或其他财产，并为此收取佣金者。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">抢短线：</span>
+                            <span>预期股价上涨，先低价买进后再在短期内以高价卖出。预期股价下跌，先高价卖出再伺机在短期内以低价再回购。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">盘整：</span>
+                            <span>股价经过一段快捷上升或下降后，遭遇阻力或支撑而呈小幅涨跌变动，做换手整理。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">抬拉：</span>
+                            <span>抬拉是用非常方法，将股价大幅度抬起。通常大户在抬拉之后便大抛出以牟取暴利。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title"> 打压：</span>
+                            <span>是用非常方法，将股价大幅度压低。通常大户在打压之后便大量买进以取暴利。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">黑马：</span>
+                            <span>是指股价在一定时间内，上涨一倍或数倍的股票</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">白马：</span>
+                            <span>是指股价已形成慢慢涨的长升通道，还有一定的上涨空间。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">骗线：</span>
+                            <span>大户利用股民们迷信技术分析数据、图表的心理，故意抬拉、打压股指，致使技术图表形成一定线型，引诱股民大量买进或卖出，从而达到他们大发其财的目的。这种期骗性造成的技术图表线型称为骗线。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title"> 技术分析：</span>
+                            <span>以供求关系为基础对市场和股票进行的分析研究。技术分析研究价格动向、交易量、交易趋势和形式,并制图表示上述因素,用图预测当前市场行为对未来证券的供求关系和个人持有的证券可能发生的影响。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">基本分析：</span>
+                            <span>根据销售额、资产、收益、产品或服务、市场和管理等因素对企业进行分析。亦指对宏观政治、经济、军事动态的分析,以预测它们对股市的影响。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">非上市股票：</span>
+                            <span>不在证券交易所注册挂牌的股票。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">委托书：</span>
+                            <span>股东委托他人(其他股东)代表自己在股东大会上行使投票权的书面证明。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">坐轿子：</span>
+                            <span>预测股价将涨，抢在众人前以低价先行买进，待众多散户跟进、股价节节升高后，卖出获利。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">抬轿子：</span>
+                            <span>在别人早已买进后才醒悟，也跟着买进，结果是把股价抬高让他人获利，而自己买进的股价已非低价，无利可图。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">下轿子：</span>
+                            <span>坐轿客逢高获利结算为下轿子。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">阻力线：</span>
+                            <span>股价上涨到达某一价位附近，如有大量的卖出情形，使股价停止上扬，甚至回跌的价。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">支撑线：</span>
+                            <span>股价下跌到在某一价位附近，如有大量买进情形，使股价停止下跌甚至回升的价位。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">跳空：</span>
+                            <span>股市受到强烈利多或利空消息的刺激,股价开始大幅跳动,在上涨时,当天的开盘或最低价，高于前一天的收盘价两个申报单位以上，称"跳空而上"；下跌时，当天的天盘或最高价低于前一天的收盘价两个申报单位，而于一天的交易中，上涨或下跌超过一个申报单位，称"跳空而下"。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">填空：</span>
+                            <span>指将跳空出现时将没有交易的空价位补回来，也就是股价跳空后，过一段时间将回到跳空前价位，以填补跳空价位。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">回档：</span>
+                            <span>上升趋势中，因股价上涨过速而回跌，以调整价位的现象。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">天价：</span>
+                            <span>个别股票由多头市场转为空头市场时的最高价。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">突破：</span>
+                            <span>指股价经过一段盘档时间后，产生的一种价格波动。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">探底：</span>
+                            <span>股价持续跌挫至某价位时便止跌回升，如此一次或数次。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">头部：</span>
+                            <span>股价上涨至某价位时便遇阻力而下滑。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">挂进：</span>
+                            <span>买进股票的意思。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">挂出：</span>
+                            <span>卖出股票的意思</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">开平盘：</span>
+                            <span>指今日的开盘价与前一营业日的收盘价相同。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">近期趋势：</span>
+                            <span>20～30天为近期趋势。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">全额交割：</span>
+                            <span>是证券主管机关对重整公司或发生重大问题的上市公司之股票，特别制定的买卖交割力法。</span>
+                        </div>
+
+
+                        <div>
+                            <span class="info-title">洗盘：</span>
+                            <span>做手为达到炒作目的，必须于途中让低价买进，且意志不坚的轿客下轿，以减轻上档压力，同时让持股者的平均价位升高，以利于施行养、套、杀的手段。</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">对敲转帐：</span>
+                            <span>转帐交易的一种方式。这是证券经纪商赚取投资利润的一种手段。经纪商们经低价买进股票，并收取客户的佣金，再以高价卖给另一客户，这样就赚取了大量利润</span>
+                        </div>
+
+                        <div>
+                            <span class="info-title">个股行情页左边的行情数据代表什么？</span>
+                            <span>最大的数字代表该证券的最新成交价，下面的数字一个是涨跌的数字额，一个是涨跌的幅度</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -483,53 +863,251 @@
 </div>
 
 <!--模态对话框  常见问题 -->
-<div class="modal fade" id="question-modal">
+<div class="modal fade" id="money-modal">
     <div class="modal-dialog">
         <div class="modal-content">
 
             <div class="modal-body">
-                <h4>交易时间表</h4>
+                <h4>港股收费标准</h4>
                 <span class="btn-close" data-dismiss="modal">X</span>
-                <table class="table table-bordered">
+                <!-- first -->
+                <table class="table table-bordered first">
+                    <thead>
+                        <tr>
+                            <th colspan="3">买卖股票时，按每笔交易成交金额，会产生如下费用，费用按照客户收取对应的币种来收取 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>类型</td>
+                        <td>费用</td>
+                        <td>收费方</td>
+                    </tr>
+                    <tr>
+                        <td>交易佣金</td>
+                        <td>0.05%，尾数不足1元亦作1元计，无最低限额</td>
+                        <td>券商</td>
+                    </tr>
+                    <tr>
+                        <td>印花税 </td>
+                        <td>0.1%，尾数不足1元亦作1元计 如：应收2.01港元，实际收取3港元</td>
+                        <td>香港政府</td>
+                    </tr>
+                    <tr>
+                        <td>交易征费</td>
+                        <td>0.0027%</td>
+                        <td>香港交易所</td>
+                    </tr>
+                    <tr>
+                        <td>交易费</td>
+                        <td>0.005%</td>
+                        <td>香港交易所</td>
+                    </tr>
+                    <tr>
+                        <td>结算费</td>
+                        <td>0.005%，最低5.5港元，其中0.002%，最低2港元为港交所收取</td>
+                        <td>香港交易所和结算商</td>
+                    </tr>
+                    <tr>
+                        <td>系统使用费</td>
+                        <td>每笔15港元，推广期间免费</td>
+                        <td>券商</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- second -->
+                <table class="table table-bordered second">
                     <thead>
                     <tr>
-                        <th colspan="2">交易时间 </th>
-                        <th>全日时间 </th>
-                        <th>半日时间 </th>
+                        <th colspan="3">买卖窝轮、牛熊证时，按每笔交易成交金额，会产生如下费用</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>竞价时段</td>
-                        <td>开市前时段</td>
-                        <td>芝加哥商业交易所</td>
-                        <td>1月</td>
+                        <td>类型</td>
+                        <td>费用</td>
+                        <td>收费方</td>
                     </tr>
                     <tr>
-                        <td rowspan="3">持续交易时段</td>
-                        <td>早市</td>
-                        <td>上午9时30分至中午12时正</td>
-                        <td>上午9时30分至中午12时正</td>
+                        <td>交易佣金</td>
+                        <td>0.05%，尾数不足1元亦作1元计，无最低限额</td>
+                        <td>券商</td>
                     </tr>
                     <tr>
-                        <td class="normal-color">延续早市</td>
-                        <td>中午12时正至下午1时正</td>
-                        <td>不适用</td>
+                        <td>交易征费</td>
+                        <td>0.0027%</td>
+                        <td>香港交易所</td>
                     </tr>
                     <tr>
-                        <td class="normal-color">午市</td>
-                        <td>下午1时正至下午4时正</td>
-                        <td>不适用</td>
+                        <td>交易费</td>
+                        <td>0.005%</td>
+                        <td>香港交易所</td>
+                    </tr>
+
+                    <tr>
+                        <td>交收费</td>
+                        <td>0.005%，最低5.5港元，其中0.002%，最低2港元为港交所收取</td>
+                        <td>香港结算所及结算商</td>
                     </tr>
                     <tr>
-                        <td>竞价时段</td>
-                        <td>收市竞价交易时段</td>
-                        <td>下午4时正至下午4时08分与下午4时10分之间随机收市</td>
-                        <td>1月</td>
+                        <td>系统使用费</td>
+                        <td>每笔15港元，推广期间免费</td>
+                        <td>券商</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="table-desc">
+                    <span>注 (1) 免佣客户的交收费，一笔交易如分数次成交，将按成交次数进行收取。</span>
+                    <span>(2) 现金结余为负数时，会产生利息，年利率为11</span>
+                </div>
+                <!-- third -->
+                <table class="table table-bordered third">
+                    <thead>
+                    <tr>
+                        <th colspan="3">新股认购费用</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>类型</td>
+                        <td>费用</td>
+                        <td>收费方</td>
                     </tr>
                     <tr>
-                        <td>备注</td>
-                        <td colspan="3">在圣诞前夕、新年前夕及农历新年前夕，将没有延续早市及午市交易。 要是当天没有早市交易，当天也不会有延续早市交易。</td>
+                        <td>电子认购手续费</td>
+                        <td>每笔50港元（无论是否中签，发起认购即收取）</td>
+                        <td>券商</td>
+                    </tr>
+                    <tr>
+                        <td>认购新股融资利息</td>
+                        <td>1.0077%（中签才会收取）</td>
+                        <td>香港证监会、交易所、经纪公司</td>
+                    </tr>
+                    <tr>
+                        <td>交易征费、交易费、经纪佣金</td>
+                        <td>0.005%</td>
+                        <td>香港交易所</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <!-- four -->
+                <table class="table table-bordered four">
+                    <thead>
+                    <tr>
+                        <th colspan="3">保证金收费</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>类型</td>
+                        <td>费用</td>
+                        <td>收费方</td>
+                    </tr>
+                    <tr>
+                        <td>保证金客户融资利息</td>
+                        <td>最优惠利息＋3%p.a</td>
+                        <td>券商</td>
+                    </tr>
+                    <tr>
+                        <td>现金客户过期结算利息</td>
+                        <td>最优惠利息＋3%p.a</td>
+                        <td>香港证监会、交易所、经纪公司</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <!-- five -->
+                <table class="table table-bordered five">
+                    <thead>
+                    <tr>
+                        <th colspan="3">港股其他服务收费</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>服务类别</td>
+                        <td>收费类别</td>
+                        <td>费用</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" class="desc">服务结算</td>
+                        <td>存入资金</td>
+                        <td>免</td>
+                    </tr>
+                    <tr>
+                        <td>提取资金</td>
+                        <td>免</td>
+                    </tr>
+                    <tr>
+                        <td>转入股票</td>
+                        <td>香港交易所</td>
+                    </tr>
+                    <tr>
+                        <td>转出股票</td>
+                        <td>每手5港币（其中3.5港元代香港结算收取），最低20港币</td>
+                    </tr>
+                    <tr>
+                        <td>股票仓库费</td>
+                        <td>免</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="7" class="desc">系统使用费</td>
+                        <td>登记过户费</td>
+                        <td>每手2港元（其中1.5港元代香港结算收取）， 另每只股票加收10港元</td>
+                    </tr>
+                    <tr>
+                        <td>代收股息（或以股代息）</td>
+                        <td>按股息总额 0.5%（其中0.12%代香港结算收取）， 最低30港元、4美元、人民币30元</td>
+                    </tr>
+                    <tr>
+                        <td>代收红股</td>
+                        <td>每手1港元（其中0.8港元代香港结算收取），最低30港元</td>
+                    </tr>
+                    <tr>
+                        <td>代行驶供股权、认购证、备兑认股证、牛熊证、自愿接受收购</td>
+                        <td>每手股票1.5港元（不足1手计1手），最低30港元</td>
+                    </tr>
+                    <tr>
+                        <td>办理股分合并/分拆</td>
+                        <td>手续费每手1港元（不足1手计1手），最低30港元。 另加交易所收费</td>
+                    </tr>
+                    <tr>
+                        <td>现金/特别选择或有限制收购</td>
+                        <td>手续费为现金总额0.2%，最低30港元。另加交易所收费</td>
+                    </tr>
+                    <tr>
+                        <td>代处理供股权、认股证、牛熊证</td>
+                        <td>每手1港元（不足1手计1手），手续费最低30港元， 另加交易所收费</td>
+                    </tr>
+
+
+                    <tr>
+                        <td rowspan="6" class="desc">其它服务</td>
+                        <td>索取账户日结/月结单</td>
+                        <td>每份50港币</td>
+                    </tr>
+                    <tr>
+                        <td>邮寄账户日结/月结单</td>
+                        <td>每份20港元+邮费</td>
+                    </tr>
+                    <tr>
+                        <td>监证日结/月结单副本费／签发证明书</td>
+                        <td>每份50港币</td>
+                    </tr>
+                    <tr>
+                        <td>代追股息委托费</td>
+                        <td>每单700港元（其中200港元代香港结算收取）， 不再记代收股息费</td>
+                    </tr>
+                    <tr>
+                        <td>代办场外交收单据</td>
+                        <td>买方卖方各500港元</td>
+                    </tr>
+                    <tr>
+                        <td>退支票费用</td>
+                        <td>200港元</td>
                     </tr>
                     </tbody>
                 </table>
@@ -539,8 +1117,8 @@
 </div>
 
 
-<script src="src/js/lib/jquery.min.js"></script>
-<script src="src/js/lib/bootstrap.min.js"></script>
+<script src="./dist/js/lib/jquery.min.js"></script>
+<script src="./dist/js/lib/bootstrap.min.js"></script>
 <script src="./dist/js/bondIndex.js"></script>
 </body>
 </html>
