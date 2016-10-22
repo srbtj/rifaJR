@@ -1,0 +1,209 @@
+@import "public";
+@import "header";
+@import "about-us";
+@import "notice-banner";
+@import "notice-title";
+@import "notice-slides";
+@import "footer";
+
+#special-wrap{
+
+  .special-txt{
+    margin-top:24px;
+    h4{
+      color: #666;
+      font-size:18px;
+      line-height: 52px;
+    }
+
+    form{
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .form-ctrl{
+      border: 1px solid #e6e6e6;
+      height: 38px;
+      line-height:38px;
+      width: 398px;
+      margin-top:15px;
+      background-color: #fdfdfd;
+      padding : 0 10px;
+      position: relative;
+      
+      .tip-info{
+        position: absolute;
+        left :430px;
+        right : 0;
+        width : 100%;
+        top:0;
+      }
+
+      .suc-info{
+        background: url("../img/header/correct-tip.png") no-repeat;
+        width: 20px;
+        height: 20px;
+        top : 8px;
+        
+
+      }
+      
+      .err-info{
+        span{
+          display: inline-block;
+          background-color: #e3f5fe;
+          color: #1a8bc6;
+          font-size:13px;
+          padding:0 12px;
+
+          &:before{
+            content: '';
+            position: absolute;
+            width:0;
+            height:0;
+            border : 10px solid transparent;
+            border-right-color: #e3f5fe;
+            left : -19px;
+            top : 10px;
+          }
+        }
+      }
+      
+      span{
+        color: #666;
+        font-size:13px;
+        margin-top:0px;
+        display: inline-block;
+        
+        i{
+          color: #2ebbe7;
+        }
+      }
+
+      span:nth-of-type(1){
+        font-weight: 500;
+      }
+
+      input,select{
+        border : 0;
+        outline : none;
+        line-height:34px;
+        height:34px;
+        margin-left : 10px;
+      }
+
+      input[type=text],
+      input[type=email],
+      input[type=tel],
+      select{
+        width : 290px;
+        position: relative;
+      }
+      
+      select{
+        line-height:30px;
+        height: 30px;
+        background-color: #fdfdfd;
+        top : -2px;
+      }
+
+      .job{
+        width:330px;
+      }
+      .province{
+        width: 298px;
+      }
+      .city{
+        width : 285px;
+      }
+      
+    }
+
+    .check-box{
+      border : none;
+      width : 100%;
+      background-color: #ffffff;
+      padding: 0;
+      > span{
+        position: relative;
+        top : -10px;
+        margin-left:10px;
+        margin-right:50px;
+        font-weight: 100!important;
+      }
+    }
+
+    .v-code{
+      width: 298px;
+      position: relative;
+
+      input:nth-of-type(1){
+        width:210px;
+      }
+
+      input:nth-of-type(2){
+        position: absolute;
+        right : -100px;
+        background-color: #2ebbe7;
+        color: #fff;
+        font-size: 13px;
+      }
+    }
+
+    .user-pro{
+      border: none;
+      background: #fff;
+      padding: 0;
+      span,a{
+        position: relative;
+        left : 10px;
+        top : -10px;
+      }
+
+    }
+
+    .form-submit{
+      
+      div{
+        display: inline-block;
+        position: relative;
+        &:nth-of-type(2){
+          margin-left: 80px;
+          input{
+            background-color: #f5f5f5;
+            color: #808080;
+            &:hover{
+              background-color: #eee;
+            }
+          }
+        }
+        input{
+          line-height: 40px;
+          font-size: 16px;
+          background-color: #2ebbe7;
+          padding: 0 50px;
+          -webkit-border-radius: 999px;
+          -moz-border-radius: 999px;
+          border-radius: 999px;
+          display: inline-block;
+          color: #fff;
+          margin: 30px 0;
+          outline:none;
+          border : none;
+          
+          &:hover{
+            background-color: #14aede;
+          }
+        }
+
+        img{
+          position: absolute;
+          top : 40px;
+          right : 10px;
+        }
+      }
+
+    }
+  }
+}
