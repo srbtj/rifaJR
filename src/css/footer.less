@@ -1,6 +1,7 @@
 /** 底部公共样式 **/
 @import "public";
 #footer{
+  position: relative;
   width: 100%;
   .footer-top{
     height : 254px;
@@ -151,5 +152,27 @@
     }
     
     
+  }
+}
+.backTop{
+  position: absolute;
+  left : 50%;
+  margin-left : 512px;
+
+  bottom:20px;
+  width: 55px;
+  height: 40px;
+  background: url("../img/header/back-top.png") no-repeat;
+  -webkit-background-size:cover;
+  background-size: cover;
+  cursor: pointer;
+}
+
+@media all and (max-width : 1048px) {
+  .backTop{
+    margin-left : 0;
+    //left : 0;
+    right : 10px;
+    margin-left : 450px;
   }
 }

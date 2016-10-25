@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width,user-scalable=no">-->
-    <title>首页</title>
+    <title>理财</title>
     <link rel="stylesheet" href="dist/css/lib/bootstrap.min.css">
-    <link rel="stylesheet" href="./dist/css/rfNotice.css">
+    <link rel="stylesheet" href="./dist/css/licai.css">
     <!--[if lt IE 9]>
     <script src="/dist/js/lib/html5shiv.min.js"></script>
     <script src="/dist/js/lib/respond.min.js"></script>
@@ -57,7 +56,7 @@
                 <img src="dist/img/header/logo.png"/>
             </a>
             <ul class="header-center-item">
-                <li class="active">
+                <li>
                     <a href="index.html">
                         <span>选择日发</span>
                         <span>需求与解决方案</span>
@@ -75,7 +74,7 @@
                         <span>外盘期货全品种</span>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="licai.html">
                         <span>理财</span>
                         <span>港币美元投资</span>
@@ -88,139 +87,53 @@
     <img src="dist/img/header/mobile-open.png" class="mobile-open" />
 </div>
 
-<div id="rifa-wrap">
+<div id="licai-wrap">
     <div class="banner">
         <a href="javascript:;">
-            <!--<img src="dist/img/rfIndex/rf-banner.png" />-->
+            <!--<img src="dist/img/rfIndex/rf-us-banner.png" />-->
         </a>
     </div>
     <div class="container">
-        <div class="rifa-title common-title-info">
-            <a href="index.html" ><span>日发首页</span></a>
-            <img src="./dist/img/rfIndex/notice-lg.png" alt="">
-            <span class="refa-banner-txt">最新通知</span>
+        <div class="licai-ctx">
+            <img src="dist/img/licai/licai-feture.png" />
         </div>
 
-        <div class="rifa-ctx">
-            <ul class="rifa-list" role="tablist">
-                <li role="presentation"  class="active" data-title = "最新通知">
-                    <a href="#latestNotice" role="tab" data-toggle="tab">
-                        <span>最新通知</span>
-                        <span>Latest Notice</span>
-                    </a>
-                </li>
-                <li role="presentation" data-title = "日发活动">
-                    <a href="#rifaEvent" role="tab" data-toggle="tab">
-                        <span>日发活动</span>
-                        <span>RIFA event</span>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- 关于日发  发展历程  控股股东  资质查询  联系我们  免责声明 -->
-            <div class="tab-content rifa-item">
-                <!-- 最新通知 -->
-                <div role="tabpanel" class="tab-pane active" id="latestNotice">
-                    <a href="rifaNoticeDetail.html?tab=0">
-                        <span>重阳节交易时间通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="rifaNoticeDetail.html?tab=0">
-                        <span>系统维护通知</span>
-                        <span>2016-09-08</span>
-                    </a>
-                    <a href="rifaNoticeDetail.html?tab=0">
-                        <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>日发证券APP系统维护通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>中秋节交易时间通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>香港悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>北京投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                </div>
-                <!--&lt;!&ndash; 日发活动 &ndash;&gt;-->
-                <div role="tabpanel" class="tab-pane" id="rifaEvent">
-                    <a href="rifaNoticeDetail.html?tab=1">
-                        <span>重阳节交易时间通知111</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="rifaNoticeDetail.html?tab=1">
-                        <span>系统维护通知11</span>
-                        <span>2016-09-08</span>
-                    </a>
-                    <a href="rifaNoticeDetail.html?tab=1">
-                        <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>日发证券APP系统维护通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>中秋节交易时间通知</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>深圳华侨城悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>香港悠投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                    <a href="javascript:;">
-                        <span>北京投资咖啡馆周六开始营业的公告</span>
-                        <span>2016-10-08</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 关于我们的联系方式 -->
+        <!-- 联系我们 -->
         <div class="about-us">
             <ul>
                 <li>
+                    <img src="dist/img/header/call-us.png" class="mobile-img"/>
                     <span>致电我们</span>
                     <span>欢迎致电我们的客户代表直接对话</span>
                     <span>800 820 8088</span>
                 </li>
                 <li>
+                    <img src="dist/img/header/web-us.png" class="mobile-img"/>
                     <span>联络我们</span>
-                    <span>另外，您亦可填写有关表格，我们<br/> 会尽快与您联络</span>
+                    <span>另外，您亦可填写有关表格，我们会尽快与您联络</span>
                     <a href="rifaIndex.html?tab=4">
                         <span>联络我们</span>
                         <img src="dist/img/header/about-arrow.png" />
                     </a>
+                    <a href="rifaIndex.html?tab=4" class="mobile-btn">
+                        <img src="dist/img/header/web-us-btn.png">
+                    </a>
                 </li>
                 <li>
+                    <img src="dist/img/header/service-address.png" class="mobile-img"/>
                     <span>服务地址</span>
-                    <span>请用我们的寻找分行功能，随时<br/> 联络我们各分行</span>
+                    <span>请用我们的寻找分行功能，随时联络我们各分行</span>
                     <a href="rifaIndex.html?tab=5">
                         <span>分行地址</span>
                         <img src="dist/img/header/about-arrow.png" />
                     </a>
+                    <a href="rifaIndex.html?tab=4" class="mobile-btn">
+                        <img src="dist/img/header/service-address-btn.png">
+                    </a>
                 </li>
             </ul>
         </div>
-
     </div>
-
 </div>
 
 <div id="footer" class="container-fluid">
@@ -303,11 +216,8 @@
     </div>
 
 </div>
-
 <script src="dist/js/lib/jquery.min.js"></script>
 <script src="dist/js/lib/bootstrap.min.js"></script>
-<script src="dist/js/checkTabStyle.js"></script>
-</body>
-</html>
+<script src="dist/js/index.js"></script>
 </body>
 </html>

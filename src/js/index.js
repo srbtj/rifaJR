@@ -26,6 +26,13 @@
     });
 
 
+    /** 增加返回底部 **/
+    $('#footer').append('<div class="backTop">');
+    $('#footer .backTop').on('click',function(){
+        $('body,html').animate({scrollTop:0},500);
+        return false;
+    });
+
 }));
 
 /*** 动态设置 html 字体大小 **/

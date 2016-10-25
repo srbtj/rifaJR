@@ -47,5 +47,12 @@
 
         var text = $('ul[role=tablist]').find('li').eq(tVal).attr('data-title');
         $('.rifa-title > span').text(text);
-    }
+    };
+
+    /** 增加返回底部 **/
+    $('#footer').append('<div class="backTop">');
+    $('#footer .backTop').on('click',function(){
+        $('body,html').animate({scrollTop:0},500);
+        return false;
+    });
 }));

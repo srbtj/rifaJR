@@ -31,4 +31,23 @@
             $(this).addClass('active').siblings().removeClass('active');
         });
     });
+
+    /** 增加返回底部 **/
+    $('#footer').append('<div class="backTop">');
+    $('#footer .backTop').on('click',function(){
+        $('body,html').animate({scrollTop:0},500);
+        return false;
+    });
+
+    /*** 设置 modal 的高度 **/
+    setModalHeight();
+    function setModalHeight(){
+        var oHeight = $(window).height();
+        $('#question-modal .modal-content, #money-modal .modal-content').css('height',oHeight - 100);
+    }
+
+    window.onresize = function(){
+        setModalHeight();
+    }
+
 }));
