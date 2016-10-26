@@ -282,7 +282,7 @@
         '<tr><td>LME锡<br/>(LME Tin)</td> <td>LSN</td> <td>LME</td> <td>美元</td> <td>5吨</td> <td>USD 8,740</td> <td>/</td></tr>';
 
 
-    var b_llTab1 =
+    var d_llTab1 =
         '<tr><td>三十年美国国库券<br/>(30 Yr U.S. Treasury Bonds)</td><td>ZB</td><td>CME-CBOT</td><td>美元</td><td>USD 100,000</td><td>USD 4,125</td><td>USD 3,750</td></tr>'+
         '<tr><td>十年美国国库债券<br/>(10 Yr U.S. Treasury Notes)</td><td>ZN</td><td>CME-CBOT</td><td>美元</td><td>USD 100,000</td><td>USD 1,485</td><td>USD 1,350</td></tr>'+
         '<tr><td>五年美国国库债券<br/>(5 Yr U.S. Treasury Notes)</td><td>ZF</td><td>CME-CBOT</td><td>美元</td><td>USD 100,000</td><td>USD 880</td><td>USD 800</td></tr>'+
@@ -495,16 +495,355 @@
         '<tr><td>JRUX6</td><td>11</td><td>24/11/2016</td><td>-</td></tr>'+
         '<tr><td>JRUZ6</td><td>12</td><td>21/21/2016</td><td>-</td></tr>';
 
-    $('#product').on('click','a',function(){
-        $('.product-table .product-first-table tbody').html(p_hqTab1)
-        $('.product-table .product-second-table tbody').html(p_lcbTab2)
+
+    var pc_whTab =
+        '<tr><td rowspan="4">欧元<br/>(Euro Currencies)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>EURM6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>EURU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>EURZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>EURH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="3">小型欧元<br/>(Mini Euro Currencies)</td><td rowspan="3">實物</td><td rowspan="3">CME</td><td>E7M6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>E7U6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>E7Z6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+
+        '<tr><td rowspan="4">日元<br/>(Japanese Yen)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>J7M6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>JPYU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>JPYZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>JPYH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="3">小型日元<br/>(Mini Japanese Yen)</td><td rowspan="3">實物</td><td rowspan="3">CME</td><td>J7M6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>J7U6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>J7Z6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+
+        '<tr><td rowspan="4">澳元<br/>(Australian Dollar)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>AUDM6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>AUDU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>AUDZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>AUDH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="4">英镑<br/>(British Pound)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>GBPM6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>GBPU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>GBPZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>GBPH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="4">加元<br/>(Canadian Dollar)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>CADM6</td><td>6</td><td>14/6/2016</td><td>14/6/2016</td></tr>' +
+        '<tr><td>CADU6</td><td>9</td><td>20/9/2016</td><td>20/9/2016</td></tr>' +
+        '<tr><td>CADZ6</td><td>12</td><td>20/12/2016</td><td>20/12/2016</td></tr>' +
+        '<tr><td>CADH7</td><td>Mar-17</td><td>14/3/2017</td><td>14/3/2017</td></tr>' +
+
+        '<tr><td rowspan="4">纽元<br/>(New Zealand Dollar)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>NZDM6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>NZDU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>NZDZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>NZDH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="4">瑞士法郎<br/>(Swiss Franc)</td><td rowspan="4">實物</td><td rowspan="4">CME</td><td>CHFM6</td><td>6</td><td>13/6/2016</td><td>13/6/2016</td></tr>' +
+        '<tr><td>CHFU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>CHFZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>CHFH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="7">美元/人民币<br/>(Chinese Renminbi)</td><td rowspan="7">實物</td><td rowspan="7">HKEX</td><td>CUSJ6</td><td>4</td><td>18/4/2016</td><td>18/4/2016</td></tr>' +
+        '<tr><td>CUSM6</td><td>5</td><td>13/5/2016</td><td>13/5/2016</td></tr>' +
+        '<tr><td>CUSU6</td><td>6</td><td>19/6/2016</td><td>19/6/2016</td></tr>' +
+        '<tr><td>CUSZ6</td><td>7</td><td>19/7/2016</td><td>18/7/2016</td></tr>' +
+        '<tr><td>CUSU6</td><td>9</td><td>19/9/2016</td><td>19/9/2016</td></tr>' +
+        '<tr><td>CUSZ6</td><td>12</td><td>19/12/2016</td><td>19/12/2016</td></tr>' +
+        '<tr><td>CUSH7</td><td>Mar-17</td><td>13/3/2017</td><td>13/3/2017</td></tr>' +
+
+        '<tr><td rowspan="11">人民币<br/>(Chinese Renminbi)</td><td rowspan="11">實物</td><td rowspan="11">CME</td><td>RMBJ6</td><td>4</td><td>18/4/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBK6</td><td>5</td><td>16/5/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBN6</td><td>7</td><td>18/7/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBQ6</td><td>8</td><td>15/8/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBU6</td><td>9</td><td>19/9/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBV6</td><td>10</td><td>17/10/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBX6</td><td>11</td><td>14/11/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBZ6</td><td>12</td><td>19/12/2016</td><td>-</td></tr>' +
+        '<tr><td>RMBF7</td><td>Jan-2017</td><td>13/1/2017</td><td>-</td></tr>' +
+        '<tr><td>RMBG7</td><td>Feb-2017</td><td>13/2/2017</td><td>-</td></tr>' +
+        '<tr><td>RMBH7</td><td>Mar-2017</td><td>13/3/2017</td><td>-</td></tr>';
+
+    var pc_powTab =
+        '<tr><td rowspan="10">纽约原油<br/>(Light Crude Oil)</td><td rowspan="10">實物</td><td rowspan="10">CME-NYMEX</td><td>CLM6</td><td>6</td><td>20/5/2016</td><td>24/5/2016</td></tr>' +
+        '<tr><td>CLN6</td><td>7</td><td>21/6/2016</td><td>23/6/2016</td></tr>'+
+        '<tr><td>CLQ6</td><td>8</td><td>20/7/2016</td><td>22/7/2016</td></tr>'+
+        '<tr><td>CLU6</td><td>9</td><td>22/8/2016</td><td>24/8/2016</td></tr>'+
+        '<tr><td>CLV6</td><td>10</td><td>20/9/2016</td><td>22/9/2016</td></tr>'+
+        '<tr><td>CLX6</td><td>11</td><td>20/10/2016</td><td>24/10/2016</td></tr>'+
+        '<tr><td>CLZ6</td><td>12</td><td>21/11/2016</td><td>23/11/2016</td></tr>'+
+        '<tr><td>CLF7</td><td>Jan-17</td><td>20/12/2016</td><td>22/12/2016</td></tr>'+
+        '<tr><td>CLG7</td><td>Feb-17</td><td>20/1/2017</td><td>24/1/2017</td></tr>'+
+        '<tr><td>CLH7</td><td>Mar-17</td><td>22/2/2017</td><td>23/2/2017</td></tr>'+
+
+        '<tr><td rowspan="12">小型纽约原油<br/>(Mini Light Crude Oil)</td><td rowspan="12">現金</td><td rowspan="12">CME-NYMEX</td><td>QMK6</td><td>5</td><td>19/4/2016</td><td>-</td></tr>' +
+        '<tr><td>QMM6</td><td>6</td><td>19/5/2016</td><td>-</td></tr>'+
+        '<tr><td>QMN6</td><td>7</td><td>20/6/2016</td><td>-</td></tr>'+
+        '<tr><td>QMQ6</td><td>8</td><td>19/7/2016</td><td>-</td></tr>'+
+        '<tr><td>QMU6</td><td>9</td><td>19/8/2016</td><td>-</td></tr>'+
+        '<tr><td>QMV6</td><td>10</td><td>19/9/2016</td><td>-</td></tr>'+
+        '<tr><td>QMX6</td><td>11</td><td>19/10/2016</td><td>-</td></tr>'+
+        '<tr><td>QMZ6</td><td>12</td><td>18/11/2016</td><td>-</td></tr>'+
+        '<tr><td>QMF7</td><td>Jan-17</td><td>19/12/2017</td><td>-</td></tr>'+
+        '<tr><td>QMG7</td><td>Feb-17</td><td>19/1/2017</td><td>-</td></tr>'+
+        '<tr><td>QMH7</td><td>Mar-17</td><td>21/2/2017</td><td>-</td></tr>'+
+        '<tr><td>QMJ7</td><td>Apr-17</td><td>20/3/2017</td><td>-</td></tr>'+
+
+        '<tr><td rowspan="12">取暖油<br/>(Heating Oil)</td><td rowspan="12">實物</td><td rowspan="12">CME-NYMEX</td><td>HOK6</td><td>5</td><td>29/4/2016</td><td>3/5/2016</td></tr>' +
+        '<tr><td>HOM6</td><td>6</td><td>31/5/2016</td><td>2/6/2016</td></tr>'+
+        '<tr><td>HON6</td><td>7</td><td>30/6/2016	</td><td>5/7/2016 </td></tr>'+
+        '<tr><td>HOQ6</td><td>8</td><td>29/7/2016	</td><td>2/8/2016 </td></tr>'+
+        '<tr><td>HOU6</td><td>9</td><td>31/8/2016</td><td>2/9/2016 </td></tr>'+
+        '<tr><td>HOV6</td><td>10</td><td>30/9/2016</td><td>4/10/2016 </td></tr>'+
+        '<tr><td>HOX6</td><td>11</td><td>31/10/2016</td><td>2/11/2016 </td></tr>'+
+        '<tr><td>HOZ6</td><td>12</td><td>30/11/2016</td><td>2/12/2016</td></tr>'+
+        '<tr><td>HOF7</td><td>Jan-17</td><td>30/12/2017</td><td>3/1/2017</td></tr>'+
+        '<tr><td>HOG7</td><td>Feb-17</td><td>31/1/2017</td><td>2/2/2017 </td></tr>'+
+        '<tr><td>HOH7</td><td>Mar-17</td><td>28/2/2017	</td><td>2/3/2017 </td></tr>'+
+        '<tr><td>HOJ7</td><td>Apr-17</td><td>31/3/2017	</td><td>4/4/2017</td></tr>'+
+
+        '<tr><td rowspan="12">天然气<br/>(Natural Gas)</td><td rowspan="12">實物</td><td rowspan="12">CME-NYMEX</td><td>NGK6</td><td>5</td><td>27/4/2016</td><td>28/4/2016</td></tr>' +
+        '<tr><td>NGM6</td><td>6</td><td>26/5/2016</td><td>27/5/2016</td></tr>'+
+        '<tr><td>NGN6</td><td>7</td><td>28/6/2016</td><td>29/6/2016 </td></tr>'+
+        '<tr><td>NGQ6</td><td>8</td><td>27/7/2016</td><td>28/7/2016 </td></tr>'+
+        '<tr><td>NGU6</td><td>9</td><td>29/8/2016</td><td>30/8/2016 </td></tr>'+
+        '<tr><td>NGV6</td><td>10</td><td>28/9/2016</td><td>29/9/2016 </td></tr>'+
+        '<tr><td>NGX6</td><td>11</td><td>27/10/2016</td><td>28/10/2016 </td></tr>'+
+        '<tr><td>NGZ6</td><td>12</td><td>28/11/2016</td><td>29/11/2016</td></tr>'+
+        '<tr><td>NGF7</td><td>Jan-17</td><td>28/12/2017</td><td>29/12/2017</td></tr>'+
+        '<tr><td>NGG7</td><td>Feb-17</td><td>21/1/2017</td><td>30/1/2017 </td></tr>'+
+        '<tr><td>NGH7</td><td>Mar-17</td><td>24/2/2017</td><td>27/2/2017 </td></tr>'+
+        '<tr><td>NGJ7</td><td>Apr-17</td><td>29/3/2017</td><td>30/3/2017</td></tr>'+
+
+        '<tr><td rowspan="12">小型天然气<br/>(Mini Natural Gas)</td><td rowspan="12">現金</td><td rowspan="12">CME-NYMEX</td><td>QGK6</td><td>5</td><td>26/4/2016</td><td>-</td></tr>' +
+        '<tr><td>QGM6</td><td>6</td><td>25/5/2016</td><td>-</td></tr>'+
+        '<tr><td>QGN6</td><td>7</td><td>27/6/2016</td><td>-</td></tr>'+
+        '<tr><td>QGQ6</td><td>8</td><td>26/7/2016</td><td>-</td></tr>'+
+        '<tr><td>QGU6</td><td>9</td><td>26/8/2016</td><td>-</td></tr>'+
+        '<tr><td>QGV6</td><td>10</td><td>27/9/2016</td><td>28/9/2016 </td></tr>'+
+        '<tr><td>QGX6</td><td>11</td><td>26/10/2016</td><td>27/10/2016 </td></tr>'+
+        '<tr><td>QGZ6</td><td>12</td><td>25/11/2016</td><td>26/11/2016</td></tr>'+
+        '<tr><td>QGF7</td><td>Jan-17</td><td>27/12/2017</td><td>28/12/2017</td></tr>'+
+        '<tr><td>QGG7</td><td>Feb-17</td><td>26/1/2017</td><td>37/1/2017 </td></tr>'+
+        '<tr><td>QGH7</td><td>Mar-17</td><td>23/2/2017</td><td>24/2/2017 </td></tr>'+
+        '<tr><td>QGJ7</td><td>Apr-17</td><td>28/3/2017</td><td>29/3/2017</td></tr>'+
+
+        '<tr><td  rowspan="12">汽油<br/>(RBOB Gasoline)</td><td rowspan="12">實物</td><td rowspan="12">CME-NYMEX</td><td>RBK6</td><td>5</td><td>29/4/2016</td><td>3/5/2016</td></tr>' +
+        '<tr><td>RBM6</td><td>6</td><td>31/5/2016</td><td>2/6/2016</td></tr>'+
+        '<tr><td>RBN6</td><td>7</td><td>30/6/2016</td><td>5/7/2016</td></tr>'+
+        '<tr><td>RBQ6</td><td>8</td><td>29/7/2016</td><td>2/8/2016</td></tr>'+
+        '<tr><td>RBU6</td><td>9</td><td>31/8/2016</td><td>2/9/2016</td></tr>'+
+        '<tr><td>RBV6</td><td>10</td><td>30/9/2016</td><td>4/10/2016 </td></tr>'+
+        '<tr><td>RBX6</td><td>11</td><td>31/10/2016</td><td>2/11/2016 </td></tr>'+
+        '<tr><td>RBZ6</td><td>12</td><td>30/11/2016</td><td>2/12/2016</td></tr>'+
+        '<tr><td>RBF7</td><td>Jan-17</td><td>30/12/2017</td><td>3/1/2017</td></tr>'+
+        '<tr><td>RBG7</td><td>Feb-17</td><td>31/1/2017</td><td>2/2/2017 </td></tr>'+
+        '<tr><td>RBH7</td><td>Mar-17</td><td>28/2/2017</td><td>2/3/2017 </td></tr>'+
+        '<tr><td>RBJ7</td><td>Apr-17</td><td>31/3/2017</td><td>4/4/2017</td></tr>';
+
+
+    var pc_gjsTab =
+        '<tr><td rowspan="7">Comex黄金<br/>(Comex Gold)</td><td rowspan="7">實物</td><td rowspan="7">CME-NYMEX(COMEX)</td><td>GCJ6</td><td>4</td><td>27/4/2016</td><td>31/3/2016</td></tr>' +
+        '<tr><td>GCM6</td><td>6</td><td>28/6/2016</td><td>31/5/2016</td></tr>'+
+        '<tr><td>GCQ6</td><td>8</td><td>29/8/2016</td><td>29/7/2016</td></tr>'+
+        '<tr><td>GCV6</td><td>10</td><td>27/10/2016</td><td>30/9/2016 </td></tr>'+
+        '<tr><td>GCZ6</td><td>12</td><td>28/12/2016</td><td>30/11/2016 </td></tr>'+
+        '<tr><td>GCG7</td><td>Feb-17</td><td>24/2/2016</td><td>31/1/2016</td></tr>'+
+        '<tr><td>GCJ7</td><td>Apr-17</td><td>26/4/2017</td><td>31/3/2017</td></tr>'+
+
+        '<tr><td rowspan="8">Comex白银<br/>(Comex Silver)</td><td rowspan="8">實物</td><td rowspan="8">CME-NYMEX(COMEX)</td><td>SIJ6</td><td>4</td><td>27/4/2016</td><td>31/3/2016</td></tr>' +
+        '<tr><td>SIK6</td><td>5</td><td>26/5/2016</td><td>29/4/2016</td></tr>'+
+        '<tr><td>SIN6</td><td>7</td><td>27/7/2016</td><td>30/6/2016</td></tr>'+
+        '<tr><td>SIU6</td><td>9</td><td>28/9/2016</td><td>31/8/2016 </td></tr>'+
+        '<tr><td>SIZ6</td><td>12</td><td>28/12/2016</td><td>30/11/2016 </td></tr>'+
+        '<tr><td>SIF7</td><td>Jan-17</td><td>27/1/2016</td><td>30/12/2016</td></tr>'+
+        '<tr><td>SIH7</td><td>Mar-17</td><td>29/3/2017</td><td>28/2/2017</td></tr>'+
+        '<tr><td>SIK7</td><td>May-17</td><td>26/5/2017</td><td>28/4/2017</td></tr>'+
+
+        '<tr><td rowspan="6">钯金<br/>(Palladium)</td><td rowspan="6">實物</td><td rowspan="6">CME-NYMEX</td><td>PAJ6</td><td>4</td><td>27/4/2016</td><td>31/3/2016</td></tr>' +
+        '<tr><td>PAK6</td><td>5</td><td>26/5/2016</td><td>29/4/2016</td></tr>'+
+        '<tr><td>PAM6</td><td>6</td><td>28/6/2016</td><td>31/5/2016</td></tr>'+
+        '<tr><td>PAU6</td><td>9</td><td>28/9/2016</td><td>31/8/2016 </td></tr>'+
+        '<tr><td>PAZ6</td><td>12</td><td>28/12/2016</td><td>30/11/2016 </td></tr>'+
+        '<tr><td>PAH7</td><td>Mar-17</td><td>29/3/2017</td><td>28/2/2017</td></tr>'+
+
+        '<tr><td rowspan="6">铂金<br/>(Platinum)</td><td rowspan="6">實物</td><td rowspan="6">CME-NYMEX</td><td>PLJ6</td><td>4</td><td>27/4/2016</td><td>31/3/2016</td></tr>' +
+        '<tr><td>PLK6</td><td>5</td><td>26/5/2016</td><td>29/4/2016</td></tr>'+
+        '<tr><td>PLM6</td><td>6</td><td>28/6/2016</td><td>31/5/2016</td></tr>'+
+        '<tr><td>PLN6</td><td>7</td><td>27/7/2016</td><td>30/6/2016</td></tr>'+
+        '<tr><td>PLV6</td><td>10</td><td>27/10/2016</td><td>30/9/2016 </td></tr>'+
+        '<tr><td>PLNF7</td><td>Jan-17</td><td>27/1/2017</td><td>30/12/2017</td></tr>'+
+
+        '<tr><td rowspan="6">日本黄金</td><td rowspan="6">實物</td><td rowspan="6">TOCOM</td><td>JAUJ6</td><td>4</td><td>25/4/2016</td><td>25/4/2016</td></tr>' +
+        '<tr><td>JAUM6</td><td>6</td><td>27/6/2016</td><td>27/6/2016</td></tr>'+
+        '<tr><td>JAUQ6</td><td>8</td><td>26/8/2016</td><td>26/8/2016</td></tr>'+
+        '<tr><td>JAUV6</td><td>10</td><td>26/10/2016</td><td>26/10/2016</td></tr>'+
+        '<tr><td>JAUV6</td><td>12</td><td>22/12/2016</td><td>22/12/2016</td></tr>'+
+        '<tr><td>JAUG6</td><td>Feb-17</td><td>23/2/2017</td><td>23/2/2017</td></tr>';
+
+
+    var pc_baseTab =
+        '<tr><td rowspan="12">Comex铜<br/>(Comex Copper)</td> <td rowspan="12">實物</td> <td rowspan="12">CME-NYMEX(COMEX)</td> <td>HGJ6</td> <td>4</td><td>27/4/2016</td><td>31/3/2016</td></tr>' +
+        '<tr><td>HGK6</td><td>5</td><td>26/5/2016</td><td>29/4/2016</td></tr>'+
+        '<tr><td>HGM6</td><td>6</td><td>28/6/2016</td><td>31/5/2016</td></tr>'+
+        '<tr><td>HGN6</td><td>7</td><td>27/7/2016</td><td>30/6/2016</td></tr>'+
+        '<tr><td>HGQ6</td><td>8</td><td>29/8/2016</td><td>29/7/2016</td></tr>'+
+        '<tr><td>HGU6</td><td>9</td><td>28/9/2016</td><td>31/8/2016 </td></tr>'+
+        '<tr><td>HGV6</td><td>10</td><td>27/10/2016</td><td>30/9/2016 </td></tr>'+
+        '<tr><td>HGX6</td><td>11</td><td>28/11/2016</td><td>31/10/2016 </td></tr>'+
+        '<tr><td>HGZ6</td><td>12</td><td>28/12/2016</td><td>30/11/2016 </td></tr>'+
+        '<tr><td>HGF7</td><td>Jan-17</td><td>27/1/2017</td><td>30/12/2017</td></tr>'+
+        '<tr><td>HGG7</td><td>Feb-17</td><td>24/2/2016</td><td>31/1/2016</td></tr>'+
+        '<tr><td>HGH7</td><td>Mar-17</td><td>29/3/2017</td><td>28/2/2017</td></tr>';
+
+    var pc_llTab1 =
+        '<tr><td rowspan="2">三十年美国国库券<br/>(30 Yr U.S. Treasury Bonds)</td><td rowspan="2">實物</td><td rowspan="2">CME-CBOT</td><td>ZBU6</td><td>9</td><td>21/9/2016</td><td>31/8/2016</td></tr>'+
+        '<tr><td>ZBZ6</td><td>12</td><td>20/12/2016</td><td>30/11/2016 </td></tr>'+
+
+        '<tr><td rowspan="3">十年美国国库债券<br/>(10 Yr U.S. Treasury Notes)</td><td rowspan="3">實物</td><td rowspan="3">CME-CBOT</td><td>ZNM6</td><td>6</td><td>21/6/2016</td><td>31/5/2016</td></tr>'+
+        '<tr><td>ZNU6</td><td>9</td><td>21/9/2016</td><td>31/8/2016 </td></tr>'+
+        '<tr><td>ZNZ6</td><td>12</td><td>21/12/2016</td><td>30/11/2016 </td></tr>'+
+
+        '<tr><td rowspan="4">五年美国国库债券<br/>(5 Yr U.S. Treasury Notes)</td><td rowspan="4">實物</td><td rowspan="4">CME-CBOT</td><td>ZFM6</td><td>6</td><td>30/6/2016</td><td>31/5/2016</td></tr>'+
+        '<tr><td>ZFU6</td><td>9</td><td>30/9/2016</td><td>31/8/2016 </td></tr>'+
+        '<tr><td>ZFZ6</td><td>12</td><td>30/12/2016</td><td>30/11/2016 </td></tr>'+
+        '<tr><td>ZFH7</td><td>Mar-17</td><td>31/3/2017</td><td>28/2/2017 </td></tr>'+
+
+        '<tr><td rowspan="4">两年美国国库债券<br/>(2 Yr U.S. Treasury Notes)</td><td rowspan="4">實物</td><td rowspan="4">CME-CBOT</td><td>ZTM6</td><td>6</td><td>30/6/2016</td><td>31/5/2016</td></tr>' +
+        '<tr><td>ZTU6</td><td>9</td><td>30/9/2016</td><td>31/8/2016 </td></tr>'+
+        '<tr><td>ZTZ6</td><td>12</td><td>30/12/2016</td><td>30/11/2016 </td></tr>'+
+        '<tr><td>ZTH7</td><td>Mar-17</td><td>31/3/2017</td><td>28/2/2017 </td></tr>';
+
+
+    /***
+     *  初始化加载数据
+     */
+
+    $('.product-table .table-info-title').html('产品介绍——环球股指期货');
+    $('.product-table .product-first-table tbody').html(p_hqTab1);
+    $('.product-table .product-second-table tbody').html(p_hqTab2);
+
+    $('.deposit-table .table-info-title').html('保证金——环球股指期货');
+    $('.deposit-table .deposit-first-table tbody').html(d_hqTab);
+
+    $('.close-table .close-first-table tbody').html(pc_hqTab);
+    $('.close-table .table-info-title').html('平仓须知——环球股指期货');
+
+
+    $('#product').on('click','a',function(e){
+
+        var target = e.currentTarget;
+        var index = $(target).index();
+        var str = '',title = '';
+        switch (index) {
+            case 0 :
+                title = '产品介绍——环球股指期货';
+                str = p_hqTab1;
+                break;
+            case 1 :
+
+                title = '产品介绍——农产品期货';
+                str = p_lcbTab1;
+                break;
+            case 2 :
+                title = '产品介绍——外汇期货';
+                str = p_whTab1;
+                break;
+            case 3 :
+                title = '产品介绍——能源期货';
+                str = p_powTab1;
+                break;
+            case 4 :
+                title = '产品介绍——贵金属期货';
+                str = p_gjsTab1;
+                break;
+            case 5 :
+                title = '产品介绍——基本金属期货';
+                str = p_baseTab1;
+                break;
+            case 6 :
+                title = '产品介绍——利率期货';
+                str = p_llTab1;
+                break;
+        }
+        $('.product-table .table-info-title').html(title);
+        $('.product-table .product-first-table tbody').html(str);
+        $('.product-table .product-second-table tbody').html(p_hqTab2);
+
+    });
+    //
+    $('#bond').on('click','a',function(e){
+
+        var target = e.currentTarget;
+        var index = $(target).index();
+        var str = '',title = '';
+        switch (index) {
+            case 0 :
+                title = '保证金——环球股指期货';
+                str = d_hqTab;
+                break;
+            case 1 :
+                title = '保证金——农产品期货';
+                str = d_lcpTab;
+                break;
+            case 2 :
+                title = '保证金——外汇期货';
+                str = d_whTab;
+                break;
+            case 3 :
+                title = '保证金——能源期货';
+                str = d_powTab;
+                break;
+            case 4 :
+                title = '保证金——贵金属期货';
+                str = d_gjsTab;
+                break;
+            case 5 :
+                title = '保证金——基本金属期货';
+                str = d_baseTab;
+                break;
+            case 6 :
+                title = '保证金——利率期货';
+                str = d_llTab1;
+                break;
+        }
+        $('.deposit-table .table-info-title').html(title);
+        $('.deposit-table .deposit-first-table tbody').html(str);
     });
 
-    $('#bond').on('click','a',function(){
-        $('.deposit-table .deposit-first-table tbody').html(p_hqTab1);
+    $('#close').on('click','a',function(e){
+        var target = e.currentTarget;
+        var index = $(target).index();
+        var str = '',title = '';
+        switch (index) {
+            case 0 :
+                str = pc_hqTab;
+                title = '平仓须知——环球股指期货';
+                break;
+            case 1 :
+                title = '平仓须知——农产品期货';
+                str = pc_lcpTab;
+                break;
+            case 2 :
+                title = '平仓须知——外汇期货';
+                str = pc_whTab;
+                break;
+            case 3 :
+                title = '平仓须知——能源期货';
+                str = pc_powTab;
+                break;
+            case 4 :
+                title = '平仓须知——贵金属期货';
+                str = pc_gjsTab;
+                break;
+            case 5 :
+                title = '平仓须知——基本金属期货';
+                str = pc_baseTab;
+                break;
+            case 6 :
+                title = '平仓须知——利率期货';
+                str = pc_llTab1;
+                break;
+        }
+
+        $('.close-table .close-first-table tbody').html(str);
+        $('.close-table .table-info-title').html(title);
     });
 
-    $('#close').on('click','a',function(){
-        $('.close-table .close-first-table tbody').html(pc_lcpTab);
-    })
 }));
